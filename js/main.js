@@ -9,7 +9,6 @@
 var app = angular.module('webApp', [
         'ngRoute',
         'ui.bootstrap',
-        'wu.masonry'
     ]);
 
 /**
