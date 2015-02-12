@@ -1,0 +1,111 @@
+<!--    blog.html-->
+<div class="container">
+
+<!--  Blog posts section -->
+<div class="row">
+<!--    Header  -->
+    <div class="col-lg-12">
+        <h2 class="page-header">Įrašai</h2>
+    </div>
+</div>
+
+<div class = "container">
+    <!--    Posts section-->
+    <div class = "row" ng-controller="BlogCtrl" ng-init="showData()" masonry>
+        <div class = "col-md-10 col-lg-10" >
+            <div class="masonry-brick" ng-repeat="post in posts | pagination: curPage * pageSize | limitTo: pageSize">
+
+    <!--    Individual post-->
+                <div id = "post" class="panel panel-default col-md-4 col-sm-5" >
+
+    <!--     Post categories, title, image, text-->
+                    <p>Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
+                    <h3 class="text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | capitalize}} </a></h3>
+                    <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}"><img class="img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
+                    <p ng-show="post.text!=''">{{post.text}}</p>
+
+    <!--     Author name, image and age-->
+                        <img class="img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
+                        <h4 class="text-center"><a href="#/{{post.author}}">{{post.author}}</a>, <small>{{post.age}} m.</small></h4>
+
+    <!--     Share-->
+                    <div class = "social text-center">
+                        <p>Dalintis:</p>
+                        <ul class="list-unstyled list-inline list-social-icons">
+                            <li class="tooltip-social facebook-link">
+                                <a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                  <i class="fa fa-facebook-square fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="tooltip-social google-plus-link">
+                                <a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
+                                  <i class="fa fa-google-plus-square fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="tooltip-social twitter-link">
+                                <a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                  <i class="fa fa-twitter-square fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-2 col-lg-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a>Top:</a></li>
+                <li><a href="#">Pasakoriai</a></li>
+                <li><a href="#">Fotomodeliai</a></li> 
+                <li><a href="#">Menininkai</a></li>
+                <li><a href="#">Kūrėjai</a></li>
+                <li><a href="#">Populiariausi</a></li> 
+            </ul>
+        </div>
+        
+        <div class="clearfix visible-lg"></div>
+
+<!--    Pagination div-->
+        <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+        <div class="pagination pagination-centered" ng-show="posts.length">
+            <ul class="pagination-controle pagination">
+                <li>
+                    <button type="button" class="btn btn-primary" ng-disabled="curPage == 0"
+             ng-click="curPage=curPage-1"> &lt; Atgal</button>
+                </li>
+                <li>
+                    <span>Psl {{curPage + 1}} iš {{ numberOfPages() }}</span>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary"
+                            ng-disabled="curPage >= posts.length/pageSize - 1"
+                            ng-click="curPage = curPage+1">Pirmyn &gt;
+                    </button>
+                </li>
+            </ul>
+        </div>
+        </div>
+    <!--    End of Posts and pagination-->
+    </div>
+    <!--    End of Posts section-->
+
+</div>    
+
+<!-- Our Images -->
+
+<div class="row">
+
+    <div class="col-lg-12">
+        <h2 class="page-header">Vaizdai</h2>
+    </div>
+
+    <div ng-repeat="post in posts | filter : withImage | limitTo : 6" class="col-md-2 col-sm-4 col-xs-6" ng-controller="BlogCtrl">
+        <a href="#/{{post.imgsrc}}"><img class="img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
+        <p class="text-center"><span ng-show="post.title!=''">{{post.title | capitalize}}, </span><a href="#/{{post.author}}">{{post.author}}</a>, {{post.age}} m.</p>
+        
+    </div>
+
+</div>
+
+</div>
