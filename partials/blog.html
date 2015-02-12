@@ -25,8 +25,8 @@
                     <p ng-show="post.text!=''">{{post.text}}</p>
 
     <!--     Author name, image and age-->
-                        <img class="img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
-                        <h4 class="text-center"><a href="#/{{post.author}}">{{post.author}}</a>, <small>{{post.age}} m.</small></h4>
+                    <a href="#/{{post.author}}"><img class="img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>
+                    <h4 class="text-center"><a href="#/{{post.author}}">{{post.author}}</a>, <small>{{post.age}} m.</small></h4>
 
     <!--     Share-->
                     <div class = "social text-center">
