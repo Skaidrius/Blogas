@@ -23,6 +23,13 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/login", {templateUrl: "partials/login.html", controller: "LoginCtrl"})
         //Sign up 
         .when("/signup", {templateUrl: "partials/signup.html", controller: "LoginCtrl"})
+        // Side menu:
+        .when("/tales", {templateUrl: "partials/blog.html", controller: "TalesCtrl"})
+        .when("/photos", {templateUrl: "partials/blog.html", controller: "PhotoCtrl"})
+        .when("/arts", {templateUrl: "partials/blog.html", controller: "ArtCtrl"})
+        .when("/creations", {templateUrl: "partials/blog.html", controller: "CreatorCtrl"})
+        .when("/popular", {templateUrl: "partials/blog.html", controller: "PopularCtrl"})
+        
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "BlogCtrl"});
 }]);
@@ -38,6 +45,7 @@ app.controller('BlogCtrl', function ($scope, $http) {
         .then(function (res) {
             $scope.posts = res.data;
         });
+    $scope.message = "Visi įrašai";
 
 //  FILTERS
 //    imagefilter
@@ -62,6 +70,27 @@ app.controller('BlogCtrl', function ($scope, $http) {
     
 });
 
+app.controller('TalesCtrl', function ($scope) {
+    $scope.message = "Pasakojimai";
+    $scope.filter = $scope.withText;
+});
+
+app.controller('PhotoCtrl', function ($scope) {
+    $scope.message = "Nuotraukos";
+    $scope.posts = $scope.withImage;
+});
+
+app.controller('ArtCtrl', function ($scope) {
+    $scope.message = "Piešiniai";
+});
+
+app.controller('CreatorCtrl', function ($scope) {
+    $scope.message = "Darbeliai";
+});
+
+app.controller('PopularCtrl', function ($scope) {
+    $scope.message = "Populiariausi";
+});
 
 //capitalize first letter
 app.filter('capitalize', function () {

@@ -12,7 +12,7 @@ read
 +            social                      
 +       header                          
 +       footer                          
-+       pagination                      
+-       infinite scroll                      
        masonry http://www.bootply.com/S3V4th3gMM 
        sort
             by author's age             

@@ -99,7 +99,8 @@ footer {  margin: 20px 0;  }
     background-color: #d3d3d3;
 }
 
-#headername{
+
+#pageheader{
     padding-top:25px;
     padding-bottom: 0;
 }
@@ -110,6 +111,10 @@ footer {  margin: 20px 0;  }
 
 #post {
     padding: 5px 5px;
+}
+
+#post:first-of-type{
+    width: 50%;
 }
 
 .textformat {

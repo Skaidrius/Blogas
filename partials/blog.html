@@ -4,19 +4,19 @@
 <!--  Blog posts section -->
 <div class="row">
 <!--    Header  -->
-    <div class="col-lg-12">
-        <h2 id="headername" class="page-header">Įrašai</h2>
+    <div id="pageheader" class="col-lg-12">
+        <h2 class="page-header">{{message}}</h2>
     </div>
 </div>
 
 <div class = "container">
     <!--    Posts section-->
-    <div class = "row" ng-controller="BlogCtrl">
+    <div class="row" ng-controller="BlogCtrl">
         <div id="postrow" class = "col-md-10 col-lg-10" infinite-scroll="myPagingFunction()" infinite-scroll-distance="3">
-            <div ng-repeat="post in posts">
+            <div ng-repeat="post in posts || filter ">
 
     <!--    Individual post-->
-                <div id = "post" class="col-md-4 col-sm-5" >
+                <div id="post" class="col-md-4 col-sm-5" >
                     
                     <div class="postcontent">
 
@@ -58,12 +58,12 @@
         
         <div class="col-md-2 col-lg-2">
             <ul rm-affix="70" class="nav nav-stacked nav-pills">
-                <li class="active"><a href="#">Top:</a></li>
-                <li><a href="#">Pasakoriai</a></li>
-                <li><a href="#">Fotomodeliai</a></li> 
-                <li><a href="#">Menininkai</a></li>
-                <li><a href="#">Kūrėjai</a></li>
-                <li><a href="#">Populiariausi</a></li> 
+                <li class="active"><a href="/">Top:</a></li>
+                <li><a href="#/tales">Pasakoriai</a></li>
+                <li><a href="#/photos">Fotomodeliai</a></li> 
+                <li><a href="#/arts">Dailininkai</a></li>
+                <li><a href="#/creations">Kūrėjai</a></li>
+                <li><a href="#/popular">Populiariausi</a></li> 
             </ul>
         </div>
         
