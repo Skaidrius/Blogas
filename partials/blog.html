@@ -5,27 +5,29 @@
 <div class="row">
 <!--    Header  -->
     <div class="col-lg-12">
-        <h2 class="page-header">Įrašai</h2>
+        <h2 id="headername" class="page-header">Įrašai</h2>
     </div>
 </div>
 
 <div class = "container">
     <!--    Posts section-->
-    <div class = "row" ng-controller="BlogCtrl" ng-init="showData()" masonry>
-        <div class = "col-md-10 col-lg-10" >
-            <div class="masonry-brick" ng-repeat="post in posts | pagination: curPage * pageSize | limitTo: pageSize">
+    <div class = "row" ng-controller="BlogCtrl" ng-init="showData()">
+        <div id="postrow" class = "col-md-10 col-lg-10" >
+            <div ng-repeat="post in posts | pagination: curPage * pageSize | limitTo: pageSize">
 
     <!--    Individual post-->
-                <div id = "post" class="panel panel-default col-md-4 col-sm-5" >
+                <div id = "post" class="col-md-4 col-sm-5" >
+                    
+                    <div class="postcontent">
 
     <!--     Post categories, title, image, text-->
-                    <p>Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
-                    <h3 class="text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | capitalize}} </a></h3>
+                    <p class="textformat">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
+                    <h3 class="textformat text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | capitalize}} </a></h3>
                     <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}"><img class="img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
-                    <p ng-show="post.text!=''">{{post.text}}</p>
+                    <p class="textformat" ng-show="post.text!=''">{{post.text}}</p>
 
     <!--     Author name, image and age-->
-                    <a href="#/{{post.author}}"><img class="img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>
+                    <a href="#/{{post.author}}"><img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>
                     <h4 class="text-center"><a href="#/{{post.author}}">{{post.author}}</a>, <small>{{post.age}} m.</small></h4>
 
     <!--     Share-->
@@ -49,13 +51,14 @@
                             </li>
                         </ul>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-md-2 col-lg-2">
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a>Top:</a></li>
+        <div class="col-md-2 col-lg-2" id="rightCol":>
+            <ul rm-affix="70" class="nav nav-stacked nav-pills">
+                <li class="active"><a href="#">Top:</a></li>
                 <li><a href="#">Pasakoriai</a></li>
                 <li><a href="#">Fotomodeliai</a></li> 
                 <li><a href="#">Menininkai</a></li>

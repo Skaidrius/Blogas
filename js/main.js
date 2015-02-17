@@ -90,4 +90,3 @@ app.filter('capitalize', function () {
         }
     };
 });
-

@@ -16,7 +16,7 @@ h5 p {
 }
 
 h4 {
-    margin-top:-2px;
+    margin-top:0px;
 }
 
 /* Footer Styles */
@@ -41,7 +41,6 @@ footer {  margin: 20px 0;  }
 .sidebar ul {
     border-radius: 5px;
     padding: 5px;
-    border: 1px solid #cccccc;
 }
 
 /* Social Icons Styles */
@@ -91,12 +90,39 @@ footer {  margin: 20px 0;  }
 }
 .list-inline {  margin: 0 0 10px 0; }
 
-.masonry-brick {
-    margin: 1em;
-    display: block;
-}
-
 .authorimage {
     margin-top: 5px;
     margin-bottom: 0;
 }
+
+.postcontent {
+    background-color: #d3d3d3;
+}
+
+#headername{
+    padding-top:25px;
+    padding-bottom: 0;
+}
+
+#postrow {
+    padding: 0;
+}
+
+#post {
+    padding: 5px 5px;
+}
+
+.textformat {
+    padding: 0 10px;
+}
+
+.textformat:first-child {
+    padding-top: 10px;
+}
+
+.social {
+    padding-bottom: 1px;
+}
+
+
+    
