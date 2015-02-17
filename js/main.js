@@ -7,8 +7,7 @@
  * Main AngularJS Web Application
  */
 var app = angular.module('webApp', [
-        'ngRoute',
-        'ui.bootstrap',
+        'ngRoute'
     ]);
 
 /**
@@ -39,15 +38,6 @@ app.controller('BlogCtrl', function ($scope, $http) {
             $scope.posts = res.data;
         });
     
-// configuration of individual posts per page
-    $scope.showData = function () {
-        $scope.curPage = 0;
-        $scope.pageSize = 8;
-        $scope.numberOfPages = function () {
-            return Math.ceil($scope.posts.length / $scope.pageSize);
-        };
-    };
-    
 //  FILTERS
 //    imagefilter
     $scope.withImage = function (post) {
@@ -71,14 +61,6 @@ app.controller('BlogCtrl', function ($scope, $http) {
     
 });
 
-//pagination by http://jsfiddle.net/prash/Cp73s/330/
-app.filter('pagination', function () {
-    'use strict';
-    return function (input, start) {
-        start = +start;
-        return input.slice(start);
-    };
-});
 
 //capitalize first letter
 app.filter('capitalize', function () {

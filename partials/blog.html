@@ -11,9 +11,9 @@
 
 <div class = "container">
     <!--    Posts section-->
-    <div class = "row" ng-controller="BlogCtrl" ng-init="showData()">
+    <div class = "row" ng-controller="BlogCtrl">
         <div id="postrow" class = "col-md-10 col-lg-10" >
-            <div ng-repeat="post in posts | pagination: curPage * pageSize | limitTo: pageSize">
+            <div ng-repeat="post in posts">
 
     <!--    Individual post-->
                 <div id = "post" class="col-md-4 col-sm-5" >
@@ -68,47 +68,9 @@
         </div>
         
         <div class="clearfix visible-lg"></div>
-
-<!--    Pagination div-->
-        <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
-        <div class="pagination pagination-centered" ng-show="posts.length">
-            <ul class="pagination-controle pagination">
-                <li>
-                    <button type="button" class="btn btn-primary" ng-disabled="curPage == 0"
-             ng-click="curPage=curPage-1"> &lt; Atgal</button>
-                </li>
-                <li>
-                    <span>Psl {{curPage + 1}} iš {{ numberOfPages() }}</span>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-primary"
-                            ng-disabled="curPage >= posts.length/pageSize - 1"
-                            ng-click="curPage = curPage+1">Pirmyn &gt;
-                    </button>
-                </li>
-            </ul>
-        </div>
-        </div>
-    <!--    End of Posts and pagination-->
     </div>
     <!--    End of Posts section-->
 
 </div>    
-
-<!-- Our Images -->
-
-<div class="row">
-
-    <div class="col-lg-12">
-        <h2 class="page-header">Vaizdai</h2>
-    </div>
-
-    <div ng-repeat="post in posts | filter : withImage | limitTo : 6" class="col-md-2 col-sm-4 col-xs-6" ng-controller="BlogCtrl">
-        <a href="#/{{post.imgsrc}}"><img class="img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
-        <p class="text-center"><span ng-show="post.title!=''">{{post.title | capitalize}}, </span><a href="#/{{post.author}}">{{post.author}}</a>, {{post.age}} m.</p>
-        
-    </div>
-
-</div>
 
 </div>
