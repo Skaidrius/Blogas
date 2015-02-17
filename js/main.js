@@ -7,7 +7,8 @@
  * Main AngularJS Web Application
  */
 var app = angular.module('webApp', [
-        'ngRoute'
+        'ngRoute',
+        'infinite-scroll'
     ]);
 
 /**
@@ -37,7 +38,7 @@ app.controller('BlogCtrl', function ($scope, $http) {
         .then(function (res) {
             $scope.posts = res.data;
         });
-    
+
 //  FILTERS
 //    imagefilter
     $scope.withImage = function (post) {
