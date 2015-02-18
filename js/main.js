@@ -7,8 +7,7 @@
  * Main AngularJS Web Application
  */
 var app = angular.module('webApp', [
-        'ngRoute',
-        'infinite-scroll'
+        'ngRoute'
     ]);
 
 /**
@@ -102,3 +101,4 @@ app.filter('capitalize', function () {
         }
     };
 });
+

@@ -65,7 +65,7 @@
     "imgsrc": "http://lorempicsum.com/nemo/200/200/1",
     "imgalt": "some",
     "text" : "", 
-    "author" : "Petras",
+    "author" : "Marius",
     "authorimage": "http://lorempicsum.com/up/75/75/1",
     "age" : 5
   }, 
@@ -75,7 +75,7 @@
     "imgsrc": "",
     "imgalt": "",
     "text" : "Rytas už vakarą protingesnis labaiuž vakarą protingesnis už vakarą protingesnis už vakarą protingesnis už vakarą protingesnis už vakarą protingesnis už vakarą protingesnis už vakarą protingesnis už vakarą protingesnis už vakarą protingesnis ", 
-    "author" : "Kazys",
+    "author" : "Timoti",
     "authorimage": "http://lorempicsum.com/nemo/75/75/6",
     "age" : 7
   }, 
@@ -85,7 +85,7 @@
     "imgsrc": "http://lorempicsum.com/futurama/200/200/6",
     "imgalt": "some",
     "text" : "", 
-    "author" : "Tadas",
+    "author" : "Kardas",
     "authorimage": "http://lorempicsum.com/up/75/75/5",
     "age" : 8
   },
@@ -95,7 +95,7 @@
     "imgsrc": "http://lorempicsum.com/nemo/200/200/4",
     "imgalt": "some",
     "text" : "", 
-    "author" : "Romas",
+    "author" : "Auksinis",
     "authorimage": "http://lorempicsum.com/up/75/75/8",
     "age" : 5
   }, 
@@ -105,7 +105,7 @@
     "imgsrc": "",
     "imgalt": "",
     "text" : "Rytas už vakarą protingesnisnedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas ", 
-    "author" : "Lukas",
+    "author" : "Nrijus",
     "authorimage": "http://lorempicsum.com/up/75/75/6",
     "age" : 7
   }
