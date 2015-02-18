@@ -1,8 +1,7 @@
-design, functionality
-
 read
 -   blog page                           
-+       menu                            
+-       menu                            
+-           not functionally yet (in collapsed mode) maybe lack of jquery
 +       posts                           
 +            categories                  
 +            title                       
@@ -13,7 +12,7 @@ read
 +       header                          
 +       footer                          
 -       infinite scroll                      
-       masonry http://www.bootply.com/S3V4th3gMM 
++       masonry http://www.bootply.com/S3V4th3gMM done another from here http://www.bootply.com/KZeecILD2t
        sort
             by author's age             
             theme                       
