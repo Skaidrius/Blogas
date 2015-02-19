@@ -4,21 +4,31 @@
 <!--  Blog posts section -->
 <div class="row">
 <!--    Header  -->
-    <div class="pageheader" class="col-sm-12">
-        <h2 class="page-header">{{message}}</h2>
+    
+    <div class="pageheader col-sm-12" >
+
+    <h2 class="navbar-form navbar-left col-sm-3">{{message}}</h2>
+
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control col-sm-4" placeholder="Ieškoti" ng-model="searchText" class="select2-no-results">
+        </div>
+    </form>
+    
     </div>
+
 </div>
 
 <div class = "container"> <!-- could be like here http://www.bootply.com/tStLqUPQo3 -->
     <!--    Posts section-->
-    <div class ="row" ng-controller="BlogCtrl">
+    <div class ="row col-sm-12" ng-controller="BlogCtrl">
         <div class="container page"> <!-- taken from here http://www.bootply.com/KZeecILD2t-->
 
-        	<article class="col-sm-6" ng-repeat="post in posts" ng-class='{"post col-sm-8":$first, "col-sm-6":!$first}'>
+        	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText" ng-class='{"post col-sm-8":$first, "col-sm-6":!$first}'>
         		<blockquote class="panel panel-default" >
         			<div class="panel-body">
         <!--     Post categories, title, image, text-->
-                        <p class="textformat">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
+                        <p class="textformat smaller">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
                         <h3 class="textformat text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | capitalize}} </a></h3>
                         <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}"><img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
                         <p class="textformat" ng-show="post.text!=''">{{post.text}}</p>
@@ -29,7 +39,7 @@
         
         <!--     Share-->
                         <div class = "social text-center">
-                            <p class = "social">Dalintis:</p>
+                            <p class = "social smaller">Dalintis:</p>
                             <ul class="list-unstyled list-inline list-social-icons">
                                 <li class="tooltip-social facebook-link">
                                     <a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">

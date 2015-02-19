@@ -1,7 +1,7 @@
 read
 -   blog page                           
 -       menu                            
--           not functionally yet (in collapsed mode) maybe lack of jquery
+-           partially not functional (in collapsed mode) in mobile
 +       posts                           
 +            categories                  
 +            title                       
@@ -36,7 +36,7 @@ read
 +        design                         
         functionality                  
 add/modify
--    user authentification              
+-    author authentification              
 -        login page
 +           design
 +           modal
@@ -47,7 +47,7 @@ add/modify
 +           modal
 -           functionality
 -           
--        authentification               
+-        user authentification               
            authors                     
            social                                
                 post posts                  
