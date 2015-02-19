@@ -2,26 +2,25 @@
 <div class="container">
 
 <!--  Blog posts section -->
-<div class="row">
 <!--    Header  -->
     
-    <div class="pageheader col-sm-12" >
+    <div class="pageheader" >
+        <div class="row">
 
-    <h2 class="navbar-form navbar-left col-sm-3">{{message}}</h2>
-
-    <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-            <input type="text" class="form-control col-sm-4" placeholder="Ieškoti" ng-model="searchText">
+            <h2 class="navbar-form navbar-left col-sm-3">{{message}}</h2>
+        
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control col-sm-4" placeholder="Ieškoti" ng-model="searchText">
+                </div>
+            </form>
         </div>
-    </form>
-    
     </div>
 
-</div>
 
-<div class = "container"> <!-- could be like here http://www.bootply.com/tStLqUPQo3 -->
+<!-- could be like here http://www.bootply.com/tStLqUPQo3 -->
     <!--    Posts section-->
-    <div class ="row col-sm-12" ng-controller="BlogCtrl">
+    <div class ="row" ng-controller="BlogCtrl">
         <div class="container page"> <!-- taken from here http://www.bootply.com/KZeecILD2t-->
 
         	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText">
@@ -66,6 +65,5 @@
     </div>
     <!--    End of Posts section-->
 
-</div>    
 
 </div>
