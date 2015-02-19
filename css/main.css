@@ -55,8 +55,8 @@ footer {  margin: 20px 0;  }
     margin: 10px auto 0 auto;
 }
 
-#pageheader{
-    padding-top:25px;
+.pageheader{
+    padding-top:30px;
     padding-bottom: 0;
 }
 
@@ -107,10 +107,10 @@ footer {  margin: 20px 0;  }
 }
 
 .navbar .nav li a {
-    font-size: 1.4em;
+    font-size: 1em;
 }
 .navbar a {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

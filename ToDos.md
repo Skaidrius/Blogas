@@ -37,8 +37,16 @@ read
         functionality                  
 add/modify
 -    user authentification              
-+        login page                     
-+        sign up page                  
+-        login page
++           design
++           modal
+-           functionality
+-        sign up page
++           design
+-               add signup with Facebook, Linkedin, Google...
++           modal
+-           functionality
+-           
 -        authentification               
            authors                     
            social                                

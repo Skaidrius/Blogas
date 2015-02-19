@@ -12,16 +12,16 @@
     </div>
     <div class="collapse navbar-collapse" collapse="isCollapsed">
       <ul class="nav navbar-nav">
-        <li><a href="#/tales">Pasakojimai</a></li>
-        <li><a href="#/photos">Nuotraukos</a></li>
-        <li><a href="#/arts">Piešiniai</a></li> 
-        <li><a href="#/creations">Darbeliai</a></li>
-        <li><a href="#/popular">Populiariausi</a></li> 
+        <li><a class="text-center" href="#/tales">Pasakojimai</a></li>
+        <li><a class="text-center" href="#/photos">Nuotraukos</a></li>
+        <li><a class="text-center" href="#/arts">Piešiniai</a></li> 
+        <li><a class="text-center" href="#/creations">Darbeliai</a></li>
+        <li><a class="text-center" href="#/popular">Populiariausi</a></li> 
       </ul>
         
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#/signup"><span class="fa fa-user"></span> Sign Up</a></li>
-        <li><a href="#/login"><span class="fa fa-key"></span> Login</a></li>
+      <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+        <li><a class="text-center" ng-click="open('partials/signup.html')"><span class="fa fa-user"></span> Registruotis(vardas/profilis)</a></li>
+        <li><a class="text-center" ng-click="open('partials/login.html')"><span class="fa fa-key"></span> Prisijungti(atsijungt)</a></li>
       </ul>
     </div>
   </div>

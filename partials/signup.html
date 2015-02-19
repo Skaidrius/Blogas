@@ -1,7 +1,7 @@
 <!--signup.html-->
-<div class="container">
-    <h2>Log in form</h2>
-    <form role="form">
+<div class="modal-header">
+    <h3 class="modal-title">Registruotis</h3>
+    <form class="modal-body" role="form">
         <div class="form-group">
             <label for="name">Your name:</label>
             <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -21,6 +21,9 @@
         <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
     </form>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="ok()">Prisijungti</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
 </div>

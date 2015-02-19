@@ -1,7 +1,7 @@
 <!--login.html-->
-<div class="container">
-    <h2>Log in form</h2>
-    <form role="form">
+<div class="modal-header">
+    <h3 class="modal-title">Prisijungti</h3>
+    <form class="modal-body" role="form">
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email">
@@ -13,6 +13,9 @@
         <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
     </form>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="ok()">Prisijungti</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
 </div>
