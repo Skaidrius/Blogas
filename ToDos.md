@@ -43,6 +43,7 @@ add/modify
 -        login page
 +           design
 +           modal
++               no check for errors
 -           functionality
 -        sign up page
 +           design
