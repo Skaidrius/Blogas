@@ -1,28 +1,28 @@
-/**
+/**********************
  * Blog site
  * @author Skaidrius <skaidrius@gmail.com>
- */
+ **********************/
 
-/**
+/***********************
  * Main AngularJS Web Application
- */
+ ***********************/
 var app = angular.module('webApp', [
         'ngRoute',
         'ui.bootstrap'
     ]);
 
-/**
- * Configure the Routes
- */
+/***********************
+ * Configure the Routes   NEED TO CHANGE TO UI ROUTER AND CONFIGURE LIKE HERE http://www.funnyant.com/angularjs-ui-router/
+ **********************/
 app.config(['$routeProvider', function ($routeProvider) {
     'use strict';
     $routeProvider
         // Blog
         .when("/", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-        //Log in 
-        .when("/login", {templateUrl: "partials/login.html", controller: "LoginCtrl"})
-        //Sign up 
-        .when("/signup", {templateUrl: "partials/signup.html", controller: "LoginCtrl"})
+        // //Log in 
+        // .when("/login", {templateUrl: "partials/login.html", controller: "LoginCtrl"})
+        // //Sign up 
+        // .when("/signup", {templateUrl: "partials/signup.html", controller: "LoginCtrl"})
         // Side menu:
         .when("/tales", {templateUrl: "partials/blog.html", controller: "TalesCtrl"})
         .when("/photos", {templateUrl: "partials/blog.html", controller: "PhotoCtrl"})
