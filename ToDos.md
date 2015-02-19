@@ -9,29 +9,32 @@ read
 +            image                      
 +            age                         
 +            social                      
-+       header                          
-+       footer                          
+-       header
++           add search
+-           add tabs - categories
++       
+-       footer                          
 -       infinite scroll                      
 +       masonry http://www.bootply.com/S3V4th3gMM done another from here http://www.bootply.com/KZeecILD2t
-       sort
-            by author's age             
-            theme                       
+-       sort
+-            by author's age             
+-            theme                       
 -      search                         
 -       top 3:                  
-            by activity (tellers)      
-            by images   (models)      
-            by paintings (artists)    
-            by workers (creators)        
-            by popularity (social)    
+-            by activity (tellers)      
+-            by images   (models)      
+-            by paintings (artists)    
+-            by workers (creators)        
+-            by popularity (social)    
 +       images                          
 -    individual page                    
-            categories                 
-            title                       
-            text                       
-            image                      
-            age                         
-            social                      
-            comments                    
+-            categories                 
+-            title                       
+-            text                       
+-            image                      
+-            age                         
+-            social                      
+-            comments                    
 -    error page                         
 +        design                         
         functionality                  
