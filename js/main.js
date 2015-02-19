@@ -34,10 +34,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "BlogCtrl"});
 }]);
 
-/**
- * Controls the Blog posts page
- */
+/**************************
+*       CONTROLLERS
+**************************/
 
+//Controls the Blog posts page
 app.controller('BlogCtrl', function ($scope, $http) {
     'use strict';
 //    retrieve individual posts from json
@@ -70,13 +71,10 @@ app.controller('BlogCtrl', function ($scope, $http) {
     
 });
 
-// CONTROLLERS
-
 // Navigation messages
 app.controller('TalesCtrl', function ($scope) {
     'use strict';
     $scope.message = "Pasakojimai";
-    $scope.filter = $scope.withText;
 });
 
 app.controller('PhotoCtrl', function ($scope) {
@@ -150,8 +148,10 @@ app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
 });
 // End of modal controller
 
-// FILTERS
-
+/*************************
+*       FILTERS
+**************************/
+ 
 // capitalize first letter
 app.filter('capitalize', function () {
     'use strict';
