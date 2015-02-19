@@ -29,9 +29,9 @@
         			<div class="panel-body">
         <!--     Post categories, title, image, text-->
                         <p class="textformat smaller">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
-                        <h3 class="textformat text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | capitalize}} </a></h3>
+                        <h3 class="textformat text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a></h3>
                         <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}"><img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
-                        <p class="textformat" ng-show="post.text!=''">{{post.text}}</p>
+                        <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
         
         <!--     Author name, image and age-->
                         <a href="#/{{post.author}}"><img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>

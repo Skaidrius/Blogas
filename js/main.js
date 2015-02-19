@@ -70,29 +70,89 @@ app.controller('BlogCtrl', function ($scope, $http) {
     
 });
 
+// CONTROLLERS
+
+// Navigation messages
 app.controller('TalesCtrl', function ($scope) {
+    'use strict';
     $scope.message = "Pasakojimai";
     $scope.filter = $scope.withText;
 });
 
 app.controller('PhotoCtrl', function ($scope) {
+    'use strict';
     $scope.message = "Nuotraukos";
     $scope.posts = $scope.withImage;
 });
 
 app.controller('ArtCtrl', function ($scope) {
+    'use strict';
     $scope.message = "Piešiniai";
 });
 
 app.controller('CreatorCtrl', function ($scope) {
+    'use strict';
     $scope.message = "Darbeliai";
 });
 
 app.controller('PopularCtrl', function ($scope) {
+    'use strict';
     $scope.message = "Populiariausi";
 });
 
-//capitalize first letter
+//  Modal controller
+app.controller('NavBarCtrl', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
+    'use strict';
+    $scope.isCollapsed = true;
+});
+
+app.controller('LoginCtrl', function ($scope, $modal, $log) { //from http://angular-ui.github.io/bootstrap/
+    'use strict';
+    $scope.items = ['item1', 'item2', 'item3'];
+
+    $scope.open = function (templateUrl) {
+
+        var modalInstance = $modal.open({
+            templateUrl: templateUrl,
+            controller: 'ModalInstanceCtrl',
+            resolve: {
+                items: function () {
+                   return $scope.items;
+                }
+            }
+        });
+
+    modalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+    },  function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
+});
+
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $modal service used above.
+
+app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+
+    $scope.items = items;
+    $scope.selected = {
+        item: $scope.items[0]
+    };
+    
+    $scope.ok = function () {
+        $modalInstance.close($scope.selected.item);
+    };
+    
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+});
+// End of modal controller
+
+// FILTERS
+
+// capitalize first letter
 app.filter('capitalize', function () {
     'use strict';
     return function (input, scope) {
@@ -101,51 +161,4 @@ app.filter('capitalize', function () {
             return input.substring(0, 1).toUpperCase() + input.substring(1);
         }
     };
-});
-
-app.controller('NavBarCtrl', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
-    $scope.isCollapsed = true;
-});
-
-app.controller('LoginCtrl', function ($scope, $modal, $log) { //from http://angular-ui.github.io/bootstrap/
-
-  $scope.items = ['item1', 'item2', 'item3'];
-
-  $scope.open = function (templateUrl) {
-
-    var modalInstance = $modal.open({
-      templateUrl: templateUrl,
-      controller: 'ModalInstanceCtrl',
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
-
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
-});
-
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
-app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
 });
