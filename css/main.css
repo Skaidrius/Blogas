@@ -112,3 +112,5 @@ footer {  margin: 20px 0;  }
 .navbar a {
     font-size: 1.6em;
 }
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

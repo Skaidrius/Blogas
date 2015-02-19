@@ -7,7 +7,8 @@
  * Main AngularJS Web Application
  */
 var app = angular.module('webApp', [
-        'ngRoute'
+        'ngRoute',
+        'ui.bootstrap'
     ]);
 
 /**
@@ -102,3 +103,6 @@ app.filter('capitalize', function () {
     };
 });
 
+app.controller('NavBarCtrl', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
+    $scope.isCollapsed = true;
+});
