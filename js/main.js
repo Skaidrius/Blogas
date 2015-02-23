@@ -8,6 +8,7 @@
  ***********************/
 var app = angular.module('webApp', [
         'ngRoute',
+        // 'ui.router',
         'ui.bootstrap'
     ]);
 
@@ -24,22 +25,23 @@ app.config(['$routeProvider', function ($routeProvider) {
         // //Sign up 
         // .when("/signup", {templateUrl: "partials/signup.html", controller: "LoginCtrl"})
         // Side menu:
-        .when("/tales", {templateUrl: "partials/blog.html", controller: "TalesCtrl"})
-        .when("/photos", {templateUrl: "partials/blog.html", controller: "PhotoCtrl"})
-        .when("/arts", {templateUrl: "partials/blog.html", controller: "ArtCtrl"})
-        .when("/creations", {templateUrl: "partials/blog.html", controller: "CreatorCtrl"})
-        .when("/popular", {templateUrl: "partials/blog.html", controller: "PopularCtrl"})
+        .when("/tales", {templateUrl: "templates/partials/main.html", controller: "TalesCtrl"})
+        .when("/photos", {templateUrl: "templates/partials/main.html", controller: "PhotoCtrl"})
+        .when("/arts", {templateUrl: "templates/partials/main.html", controller: "ArtCtrl"})
+        .when("/creations", {templateUrl: "templates/partials/main.html", controller: "CreatorCtrl"})
+        .when("/popular", {templateUrl: "templates/partials/main.html", controller: "PopularCtrl"})
         
         // else 404
-        .otherwise("/404", {templateUrl: "partials/404.html", controller: "BlogCtrl"});
+        .otherwise("/404", {templateUrl: "templates/partials/404.html", controller: "BlogCtrl"});
 }]);
+
 
 /**************************
 *       CONTROLLERS
 **************************/
 
 //Controls the Blog posts page
-app.controller('BlogCtrl', function ($scope, $http) {
+app.controller('MainCtrl', function ($scope, $http) {
     'use strict';
 //    retrieve individual posts from json
     $http.get('js/posts.json')
