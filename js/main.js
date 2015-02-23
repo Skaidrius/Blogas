@@ -7,41 +7,112 @@
  * Main AngularJS Web Application
  ***********************/
 var app = angular.module('webApp', [
-        'ngRoute',
-        // 'ui.router',
+
+        'ui.router',
         'ui.bootstrap'
     ]);
 
 /***********************
- * Configure the Routes   NEED TO CHANGE TO UI ROUTER AND CONFIGURE LIKE HERE http://www.funnyant.com/angularjs-ui-router/
+ *         Routes          CHANGED FROM ngRoute TO UI-ROUTER AND CONFIGURED LIKE HERE http://www.funnyant.com/angularjs-ui-router/
  **********************/
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
     'use strict';
-    $routeProvider
-        // Blog
-        .when("/", {templateUrl: "templates/partials/main.html", controller: "MainCtrl"})
-        // //Log in 
-        // .when("/login", {templateUrl: "partials/login.html", controller: "LoginCtrl"})
-        // //Sign up 
-        // .when("/signup", {templateUrl: "partials/signup.html", controller: "LoginCtrl"})
-        // Side menu:
-        .when("/tales", {templateUrl: "templates/partials/main.html", controller: "TalesCtrl"})
-        .when("/photos", {templateUrl: "templates/partials/main.html", controller: "PhotoCtrl"})
-        .when("/arts", {templateUrl: "templates/partials/main.html", controller: "ArtCtrl"})
-        .when("/creations", {templateUrl: "templates/partials/main.html", controller: "CreatorCtrl"})
-        .when("/popular", {templateUrl: "templates/partials/main.html", controller: "PopularCtrl"})
-        
-        // else 404
-        .otherwise("/404", {templateUrl: "templates/partials/404.html", controller: "BlogCtrl"});
-}]);
+    $urlRouterProvider.otherwise('/');
 
+// HOME STATES AND NESTED VIEWS ========================================
+    $stateProvider
+    .state('home',{
+        url: '/home',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'MainController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    })
+    .state('tales',{
+        url: '/tales',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'TalesController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    })
+    .state('photos',{
+        url: '/photos',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'PhotosController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    })
+    .state('arts',{
+        url: '/arts',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'ArtsController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    })
+    .state('creations',{
+        url: '/creations',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'CreationsController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    })
+    .state('popular',{
+        url: '/popular',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'PopularController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    });
+});
 
 /**************************
 *       CONTROLLERS
 **************************/
 
 //Controls the Blog posts page
-app.controller('MainCtrl', function ($scope, $http) {
+app.controller('MainController', function ($scope, $http) {
     'use strict';
 //    retrieve individual posts from json
     $http.get('js/posts.json')
@@ -74,39 +145,39 @@ app.controller('MainCtrl', function ($scope, $http) {
 });
 
 // Navigation messages
-app.controller('TalesCtrl', function ($scope) {
+app.controller('TalesController', function ($scope) {
     'use strict';
     $scope.message = "Pasakojimai";
 });
 
-app.controller('PhotoCtrl', function ($scope) {
+app.controller('PhotosController', function ($scope) {
     'use strict';
     $scope.message = "Nuotraukos";
     $scope.posts = $scope.withImage;
 });
 
-app.controller('ArtCtrl', function ($scope) {
+app.controller('ArtsController', function ($scope) {
     'use strict';
     $scope.message = "Piešiniai";
 });
 
-app.controller('CreatorCtrl', function ($scope) {
+app.controller('CreationsController', function ($scope) {
     'use strict';
     $scope.message = "Darbeliai";
 });
 
-app.controller('PopularCtrl', function ($scope) {
+app.controller('PopularController', function ($scope) {
     'use strict';
     $scope.message = "Populiariausi";
 });
 
 //  Modal controller
-app.controller('NavBarCtrl', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
+app.controller('NavBarController', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
     'use strict';
     $scope.isCollapsed = true;
 });
 
-app.controller('LoginCtrl', function ($scope, $modal, $log) { //from http://angular-ui.github.io/bootstrap/
+app.controller('LoginController', function ($scope, $modal, $log) { //from http://angular-ui.github.io/bootstrap/
     'use strict';
     $scope.items = ['item1', 'item2', 'item3'];
 
@@ -114,7 +185,7 @@ app.controller('LoginCtrl', function ($scope, $modal, $log) { //from http://angu
 
         var modalInstance = $modal.open({
             templateUrl: templateUrl,
-            controller: 'ModalInstanceCtrl',
+            controller: 'ModalInstanceController',
             resolve: {
                 items: function () {
                    return $scope.items;
@@ -133,7 +204,7 @@ app.controller('LoginCtrl', function ($scope, $modal, $log) { //from http://angu
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-app.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+app.controller('ModalInstanceController', function ($scope, $modalInstance, items) {
 
     $scope.items = items;
     $scope.selected = {

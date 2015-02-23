@@ -33,17 +33,24 @@
     <![endif]-->
 
 <!-- Our Website Content Goes Here -->
-    <div ng-include='"templates/partials/header.html"'></div>
-    <div ng-view></div>
-    <div ng-include='"templates/partials/footer.html"'></div>
+    <!--<div ng-include='"templates/partials/header.html"'></div>-->
+    <div class="container">
+    <!--The View-->
+        
+        <div ui-view="header"></div>
+        <div ui-view="content"></div>
+        <div ui-view="footer"></div>
+    
+    </div>
+    <!--<div ng-include='"templates/partials/footer.html"'></div>-->
     
 <!-- Vendor: Angular, Bootstrap javascripts -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="vendor/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     
-
 <!-- Our Website Javascripts -->
     <script src="js/main.js"></script>
 
