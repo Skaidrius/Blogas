@@ -22,31 +22,31 @@
         		<blockquote class="panel panel-default" >
         			<div class="panel-body">
         <!--     Post categories, title, image, text-->
-                        <p class="textformat smaller">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" ui-sref="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
-                        <h3 class="textformat text-center"><a ng-show="post.title!=''" ui-sref="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a></h3>
-                        <a ng-show="post.imgsrc!=''" ui-sref="#/{{post.imgsrc}}"><img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
+                        <p class="textformat smaller">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
+                        <h3 class="textformat text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a></h3>
+                        <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}"><img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
                         <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
         
         <!--     Author name, image and age-->
-                        <a ui-sref="#/{{post.author}}"><img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>
-                        <h4 class="text-center"><a ui-sref="#/{{post.author}}">{{post.author}}</a>, {{post.age}} m.</h4>
+                        <a href="#/{{post.author}}"><img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>
+                        <h4 class="text-center"><a href="#/{{post.author}}">{{post.author}}</a>, <a href="#/{{post.author}}">{{post.age}} m.</a></h4>
         
         <!--     Share-->
                         <div class = "social text-center">
                             <p class = "social smaller">Dalintis:</p>
                             <ul class="list-unstyled list-inline list-social-icons">
                                 <li class="tooltip-social facebook-link">
-                                    <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                    <a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
                                       <i class="fa fa-facebook-square fa-2x"></i>
                                     </a>
                                 </li>
                                 <li class="tooltip-social google-plus-link">
-                                    <a ui-sref="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
+                                    <a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
                                       <i class="fa fa-google-plus-square fa-2x"></i>
                                     </a>
                                 </li>
                                 <li class="tooltip-social twitter-link">
-                                    <a ui-sref="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                    <a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
                                       <i class="fa fa-twitter-square fa-2x"></i>
                                     </a>
                                 </li>

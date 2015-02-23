@@ -19,7 +19,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     'use strict';
     $routeProvider
         // Blog
-        .when("/", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
+        .when("/", {templateUrl: "templates/partials/main.html", controller: "MainCtrl"})
         // //Log in 
         // .when("/login", {templateUrl: "partials/login.html", controller: "LoginCtrl"})
         // //Sign up 
