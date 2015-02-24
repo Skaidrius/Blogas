@@ -157,10 +157,16 @@ app.controller('MainController', function ($scope, $http) {
     
 });
 
-// Navigation messages
+// Navigation controllers
 app.controller('TalesController', function ($scope) {
     'use strict';
     $scope.message = "Pasakojimai";
+    $scope.posts = function(posts){
+        if (posts.text != ""){
+            return true;
+        }
+        return false;
+    };
 });
 
 app.controller('PhotosController', function ($scope) {

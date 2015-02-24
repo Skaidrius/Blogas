@@ -74,7 +74,7 @@ footer {  margin: 20px 0;  }
 }
 
 .container.page {
-    padding: 0;
+    padding-left: 0;
     
      -webkit-column-width: 23em;
         -moz-column-width: 23em;
@@ -119,4 +119,8 @@ footer {  margin: 20px 0;  }
     padding: 0 0 0 15px;
     width: 100%;
     margin: 0;
+}
+
+#searchform .search-line {
+    padding-left: 0;
 }
