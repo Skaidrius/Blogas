@@ -40,7 +40,7 @@
     "age" : 8
   },
   {
-    "categories": [""],
+    "categories": ["visos"],
     "title": "sitle",
     "imgsrc": "http://lorempicsum.com/nemo/200/200/3",
     "imgalt": "some",
@@ -90,7 +90,7 @@
     "age" : 8
   },
   {
-    "categories": [""],
+    "categories": ["visos"],
     "title": "alte",
     "imgsrc": "http://lorempicsum.com/nemo/200/200/6",
     "imgalt": "some",

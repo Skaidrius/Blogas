@@ -277,3 +277,20 @@ app.filter('capitalize', function () {
         }
     };
 });
+
+
+app.filter('filtera', function () {
+    'use strict';
+    return function (items) {
+        var filtered = [];
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            if (item.text!="") {
+              filtered.push(item);
+            }
+        }
+        return filtered;
+    };
+});
+
+//need to make universal filter like here https://stackoverflow.com/questions/14882370/filter-list-of-items-when-clicking-category-link/14883002#14883002
