@@ -11,15 +11,15 @@
 <head>
 
 <!-- Meta-Information -->
-    <title>Blog</title>
+    <title>Bloga</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Some company">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.css">
 
 <!-- Our Website CSS Styles -->
@@ -33,24 +33,19 @@
     <![endif]-->
 
 <!-- Our Website Content Goes Here -->
-    <!--<div ng-include='"templates/partials/header.html"'></div>-->
     <div class="container">
     <!--The View-->
         
         <div ui-view="header"></div>
         <div ui-view="content"></div>
         <div ui-view="footer"></div>
-    
     </div>
-    <!--<div ng-include='"templates/partials/footer.html"'></div>-->
-    
+
 <!-- Vendor: Angular, Bootstrap javascripts -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
 <!-- Our Website Javascripts -->
     <script src="js/main.js"></script>
 

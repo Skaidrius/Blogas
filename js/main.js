@@ -7,7 +7,6 @@
  * Main AngularJS Web Application
  ***********************/
 var app = angular.module('webApp', [
-
         'ui.router',
         'ui.bootstrap'
     ]);
@@ -17,11 +16,11 @@ var app = angular.module('webApp', [
  **********************/
 app.config(function($stateProvider, $urlRouterProvider) {
     'use strict';
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('home');
 
 // HOME STATES AND NESTED VIEWS ========================================
     $stateProvider
-    .state('home',{
+    .state('home', {
         url: '/home',
         views: {
             'header': {
@@ -35,7 +34,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('tales',{
+    .state('tales', {
         url: '/tales',
         views: {
             'header': {
@@ -49,7 +48,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('photos',{
+    .state('photos', {
         url: '/photos',
         views: {
             'header': {
@@ -63,7 +62,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('arts',{
+    .state('arts', {
         url: '/arts',
         views: {
             'header': {
@@ -77,7 +76,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('creations',{
+    .state('creations', {
         url: '/creations',
         views: {
             'header': {
@@ -91,7 +90,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('popular',{
+    .state('popular', {
         url: '/popular',
         views: {
             'header': {
@@ -111,7 +110,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 *       CONTROLLERS
 **************************/
 
-//Controls the Blog posts page
+//Controls the Main blog posts page - content.html
 app.controller('MainController', function ($scope, $http) {
     'use strict';
 //    retrieve individual posts from json
@@ -171,7 +170,7 @@ app.controller('PopularController', function ($scope) {
     $scope.message = "Populiariausi";
 });
 
-//  Modal controller
+//  MODAL controller
 app.controller('NavBarController', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
     'use strict';
     $scope.isCollapsed = true;
@@ -225,7 +224,7 @@ app.controller('ModalInstanceController', function ($scope, $modalInstance, item
 *       FILTERS
 **************************/
  
-// capitalize first letter
+// Capitalize first letter
 app.filter('capitalize', function () {
     'use strict';
     return function (input, scope) {
