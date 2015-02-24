@@ -1,5 +1,5 @@
 [ 
-  { 
+  { "type": "texts",
     "categories": ["visos", "pasakėlė"],
     "title": "fitle",
     "imgsrc": "",
@@ -10,6 +10,7 @@
     "age" : 3
   }, 
   {
+    "type": "arts",
     "categories": ["visos", "darbeliai", "šeima"],
     "title": "rokas",
     "imgsrc": "http://lorempicsum.com/nemo/200/200/1",
@@ -20,6 +21,7 @@
     "age" : 5
   }, 
   {
+    "type": "texts",
     "categories": ["visos", "istorija"],
     "title": "mitle",
     "imgsrc": "",
@@ -30,6 +32,7 @@
     "age" : 7
   }, 
   {
+    "type": "creations",
     "categories": ["visos", "piešiniai", "gamta"],
     "title": "",
     "imgsrc": "http://lorempicsum.com/futurama/200/200/2",
@@ -40,6 +43,7 @@
     "age" : 8
   },
   {
+    "type": "photos",
     "categories": ["visos"],
     "title": "sitle",
     "imgsrc": "http://lorempicsum.com/nemo/200/200/3",
@@ -50,6 +54,7 @@
     "age" : 5
   }, 
   {
+    "type": "texts",
     "categories": ["visos", "pasakėlė", "miškas", "šeima"],
     "title": "ritle",
     "imgsrc": "",
@@ -60,6 +65,7 @@
     "age" : 7
   }, 
   {
+    "type": "arts",
     "categories": ["visos", "darbeliai", "šeima"],
     "title": "juokas",
     "imgsrc": "http://lorempicsum.com/nemo/200/200/4",
@@ -70,6 +76,7 @@
     "age" : 5
   }, 
   {
+    "type": "texts",
     "categories": ["visos", "istorija"],
     "title": "utle",
     "imgsrc": "",
@@ -80,6 +87,7 @@
     "age" : 7
   }, 
   {
+    "type": "photos",
     "categories": ["visos", "piešiniai", "gamta"],
     "title": "",
     "imgsrc": "http://lorempicsum.com/futurama/200/200/5",
@@ -90,6 +98,7 @@
     "age" : 8
   },
   {
+    "type": "photos",
     "categories": ["visos"],
     "title": "alte",
     "imgsrc": "http://lorempicsum.com/nemo/200/200/6",
@@ -100,6 +109,7 @@
     "age" : 5
   }, 
   {
+    "type": "text",
     "categories": ["visos", "pasakėlė", "miškas", "šeima"],
     "title": "malte",
     "imgsrc": "",
