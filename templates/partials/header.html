@@ -8,16 +8,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#/home">Į pradžią</a>
+      <a class="navbar-brand" ui-sref="home" ng-click="filters.type = ''">Į pradžią</a>
     </div>
     <div class="collapse navbar-collapse" collapse="isCollapsed">
       <ul class="nav navbar-nav">
-        <li><a class="text-center" href="#/tales">Pasakojimai</a></li>
-        <li><a class="text-center" href="#/photos">Nuotraukos</a></li>
-        <li><a class="text-center" href="#/videos">Video</a></li>
-        <li><a class="text-center" href="#/arts">Piešiniai</a></li> 
-        <li><a class="text-center" href="#/creations">Darbeliai</a></li>
-        <li><a class="text-center" href="#/popular">Populiariausi</a></li> 
+        <li><a class="text-center" ui-sref="tales" ng-click="filters.type = 'tales'" >Pasakojimai</a></li>
+        <li><a class="text-center" ui-sref="photos"ng-click="filters.type = 'photos'">Nuotraukos</a></li>
+        <li><a class="text-center" ui-sref="videos"ng-click="filters.type = 'videos'">Video</a></li>
+        <li><a class="text-center" ui-sref="arts" ng-click="filters.type = 'arts'">Piešiniai</a></li> 
+        <li><a class="text-center" ui-sref="creations" ng-click="filters.type = 'creations'">Darbeliai</a></li>
+        <li><a class="text-center" ui-sref="popular" ng-click="filters.type = 'popular'">Populiariausi</a></li> 
       </ul>
         
       <ul class="nav navbar-nav navbar-right" ng-controller="LoginController">

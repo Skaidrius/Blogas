@@ -22,7 +22,7 @@
 <div class ="row">
     <div class="container page"> <!-- taken from here http://www.bootply.com/KZeecILD2t-->
 
-    	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText">
+    	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText | filter:filters">
     		<blockquote class="panel panel-default" >
     			<div class="panel-body">
     <!--     Post categories, title, image, text-->

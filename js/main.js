@@ -16,7 +16,7 @@ var app = angular.module('webApp', [
  **********************/
 app.config(function($stateProvider, $urlRouterProvider) {
     'use strict';
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('/home');
 
 // HOME STATES AND NESTED VIEWS ========================================
     $stateProvider
@@ -135,6 +135,7 @@ app.controller('MainController', function ($rootScope, $http) {
         });
         
     $rootScope.message = "Visi įrašai";
+    $rootScope.filters = { };
 });
 
 // Navigation controllers
@@ -279,18 +280,18 @@ app.filter('capitalize', function () {
 });
 
 
-app.filter('filtera', function () {
-    'use strict';
-    return function (items) {
-        var filtered = [];
-        for (var i = 0; i < items.length; i++) {
-            var item = items[i];
-            if (item.text!="") {
-              filtered.push(item);
-            }
-        }
-        return filtered;
-    };
-});
+// app.filter('filtera', function () {
+//     'use strict';
+//     return function (items) {
+//         var filtered = [];
+//         for (var i = 0; i < items.length; i++) {
+//             var item = items[i];
+//             if (item.text!="") {
+//               filtered.push(item);
+//             }
+//         }
+//         return filtered;
+//     };
+// });
 
 //need to make universal filter like here https://stackoverflow.com/questions/14882370/filter-list-of-items-when-clicking-category-link/14883002#14883002

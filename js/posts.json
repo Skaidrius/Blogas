@@ -1,5 +1,5 @@
 [ 
-  { "type": "texts",
+  { "type": "tales",
     "categories": ["visos", "pasakėlė"],
     "title": "fitle",
     "imgsrc": "",
@@ -21,7 +21,7 @@
     "age" : 5
   }, 
   {
-    "type": "texts",
+    "type": "tales",
     "categories": ["visos", "istorija"],
     "title": "mitle",
     "imgsrc": "",
@@ -54,7 +54,7 @@
     "age" : 5
   }, 
   {
-    "type": "texts",
+    "type": "tales",
     "categories": ["visos", "pasakėlė", "miškas", "šeima"],
     "title": "ritle",
     "imgsrc": "",
@@ -76,7 +76,7 @@
     "age" : 5
   }, 
   {
-    "type": "texts",
+    "type": "tales",
     "categories": ["visos", "istorija"],
     "title": "utle",
     "imgsrc": "",
@@ -109,13 +109,13 @@
     "age" : 5
   }, 
   {
-    "type": "text",
+    "type": "tales",
     "categories": ["visos", "pasakėlė", "miškas", "šeima"],
     "title": "malte",
     "imgsrc": "",
     "imgalt": "",
     "text" : "Rytas už vakarą protingesnisnedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas nedirba tas ", 
-    "author" : "Nrijus",
+    "author" : "Norijus",
     "authorimage": "http://lorempicsum.com/up/75/75/6",
     "age" : 7
   }
