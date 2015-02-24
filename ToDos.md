@@ -1,45 +1,46 @@
-read
+SITE TREE
+
 -   blog page                           
--       menu                            
--           partially not functional (in collapsed mode) in mobile
-+       posts                           
-+            categories                  
-+            title                       
-+            text                        
-+            image                      
-+            age                         
-+            social                      
--       header
-+           add search
--           add tabs - categories
-+       
--       footer                          
--       infinite scroll                      
-+       masonry http://www.bootply.com/S3V4th3gMM done another from here http://www.bootply.com/KZeecILD2t
--       sort
--            by author's age             
--            theme                       
--      search                         
--       top 3:                  
--            by activity (tellers)      
--            by images   (models)      
--            by paintings (artists)    
--            by workers (creators)        
--            by popularity (social)    
-+       images                          
--    individual page                    
--            categories                 
--            title                       
--            text                       
--            image                      
--            age                         
--            social                      
--            comments                    
--    error page                         
-+        design                         
-        functionality                  
-add/modify
--    author authentification              
+-   header.html (menu) partially not functional (in collapsed mode) in mobile
+-       categories:
+-           home
+-           tales
+-           photos
+-           videos
+-           pictures/arts
+-           creations/manufacture
+-           popular
+-           login
++               modal
+-           signup
++               modal
+-   content.html
++       search
+-       add tabs - categories
++       posts 
++           category  
++           title    
++           text     
++           image/video  
++           age      
++           social  
++           masonry http://www.bootply.com/S3V4th3gMM done another from here http://www.bootply.com/KZeecILD2t
+-           infinite scroll       
+-   footer.html       
+
+-   individual page template                   
+-        categories                 
+-        title                       
+-        text                       
+-        image/age                      
+-        author
+-        age                         
+-        social                      
+-        comments
+-        modal
+
+-   add/modify
+-       author authentification              
 -        login page
 +           design
 +           modal

@@ -62,6 +62,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('videos', {
+        url: '/videos',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/partials/content.html', controller: 'VideosController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+        }
+    })
     .state('arts', {
         url: '/arts',
         views: {
@@ -152,6 +166,12 @@ app.controller('TalesController', function ($scope) {
 app.controller('PhotosController', function ($scope) {
     'use strict';
     $scope.message = "Nuotraukos";
+    $scope.posts = $scope.withImage;
+});
+
+app.controller('VideosController', function ($scope) {
+    'use strict';
+    $scope.message = "Video";
     $scope.posts = $scope.withImage;
 });
 
