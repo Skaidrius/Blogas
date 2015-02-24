@@ -26,14 +26,34 @@
     		<blockquote class="panel panel-default" >
     			<div class="panel-body">
     <!--     Post categories, title, image, text-->
-                    <p class="textformat smaller">Kategorijos: <span ng-repeat="category in post.categories"><a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a><span ng-hide="category == post.categories[post.categories.length-1]">, </span></span></p>
-                    <h3 class="textformat text-center"><a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a></h3>
-                    <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}"><img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}"></a>
+    <!--categories-->
+                    <p class="textformat smaller">Kategorijos: 
+                        <span ng-repeat="category in post.categories">
+                            <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
+                            <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                        </span>
+                    </p>
+    <!--title-->
+                    <h3 class="textformat text-center">
+                        <a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
+                    </h3>
+    <!--images-->
+                    <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
+                        <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
+                    </a>
                     <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
-    
+    <!--Video native since bootstrap 3.2.0         -->
+                    <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
+                        <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
+                    </div>
     <!--     Author name, image and age-->
-                    <a href="#/{{post.author}}"><img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}"></a>
-                    <h4 class="text-center"><a href="#/{{post.author}}">{{post.author}}</a>, <a href="#/{{post.author}}">{{post.age}} m.</a></h4>
+                    <a href="#/{{post.author}}">
+                        <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
+                    </a>
+                    <h4 class="text-center">
+                        <a href="#/{{post.author}}">{{post.author}}</a>, 
+                        <a href="#/{{post.author}}">{{post.age}} m.</a>
+                    </h4>
     
     <!--     Share-->
                     <div class = "social text-center">

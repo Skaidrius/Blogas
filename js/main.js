@@ -8,7 +8,8 @@
  ***********************/
 var app = angular.module('webApp', [
         'ui.router',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'youtube-embed'
     ]);
 
 /***********************
