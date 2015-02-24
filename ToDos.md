@@ -16,7 +16,7 @@ SITE TREE
 +               modal
 -   content.html
 +       search
--       add tabs - categories
+-       add tabs - categories  like here http://www.bootply.com/vHj8Tv7uJu
 +       posts 
 +           category  
 +           title    
