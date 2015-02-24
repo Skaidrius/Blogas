@@ -42,7 +42,7 @@
                         <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
                     </a>
                     <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
-    <!--Video native since bootstrap 3.2.0         -->
+    <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
                     <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                         <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                     </div>
