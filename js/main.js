@@ -270,6 +270,27 @@ app.controller('ModalInstanceController', function ($scope, $modalInstance, item
 });
 // End of modal controller
 
+// TypeDropDown controller for newpost.html
+app.controller('TypeDropdownCtrl', function ($scope) {
+    $scope.types = [
+        'Pasakojimai',
+        'Nuotraukos',
+        'Video',
+        'Piešiniai',
+        'Darbeliai'
+    ];
+    $scope.authors = [
+        'Jonas',
+        'Petras',
+        'Rimas',
+        'Linas'
+    ];
+    
+    $scope.selectedType = "Pasakojimai";
+    $scope.selectedAuthor = "Jonas";
+});
+  
+
 /*************************
 *       FILTERS
 **************************/

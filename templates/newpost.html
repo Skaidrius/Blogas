@@ -1,37 +1,45 @@
 <div class="modal-header">
     <h3 class="modal-title">Naujas įrašas</h3>
-    <form class="modal-body" role="form">
+    <form class="modal-body" role="form" ng-controller="TypeDropdownCtrl">
         <div class="form-group">
-            <label for="category">Pasirinkite kategoriją (-as):</label>
-            <input type="text" class="form-control" id="category" placeholder="Kategorijos">
+            <label>Pasirinkite įrašo tipą (-as):</label>
+            <select class="form-control" ng-model="selectedType">
+                <option ng-repeat="item in types" value="{{item}}">{{item}}</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="title">Pavadinimas:</label>
             <input type="text" class="form-control" id="title" placeholder="Įveskite pavadinimą">
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-show="selectedType=='Pasakojimai'">
             <label for="tale">Pasakojimas:</label>
-            <textarea class="form-control" rows="5" id="tale" placeholder="Jūsų pasakojimas"></textarea>
+            <textarea class="form-control" rows="11" id="tale" placeholder="Jūsų pasakojimas"></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-show="selectedType=='Nuotraukos'">
             <label for="photolink">Nuotrauka:</label>
-            <input type="text" class="form-control" id="photolink" placeholder="Įveskite vaizdo nuorodą">
+            <input type="text" class="form-control" id="photolink" placeholder="Įveskite nuotraukos nuorodą">
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-show="selectedType=='Video'">
             <label for="videolink">Video:</label>
             <input type="text" class="form-control" id="videolink" placeholder="Įveskite video nuorodą">
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-show="selectedType=='Piešiniai'">
             <label for="artlink">Piešinys:</label>
             <input type="text" class="form-control" id="artlink" placeholder="Įveskite piešinio nuorodą">
         </div>
-        <div class="form-group">
-            <label for="creationlink">Piešinys:</label>
+        <div class="form-group" ng-show="selectedType=='Darbeliai'">
+            <label for="creationlink">Darbelis:</label>
             <input type="text" class="form-control" id="creationlink" placeholder="Įveskite darbelio nuorodą">
         </div>
         <div class="form-group">
-            <label for="author">Autorius:</label>
-            <input type="text" class="form-control" id="author" placeholder="Įveskite/Pasirinkite autorių">
+            <label for="author">Nurodykite autorių:</label>
+            <select class="form-control" ng-model="selectedAuthor">
+                <option ng-repeat="item in authors" value="{{item}}">{{item}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="category">Priskirkite kategoriją (-as):</label>
+            <input type="text" class="form-control" id="category" placeholder="Kategorijos">
         </div>
     </form>
     <div class="modal-footer">
