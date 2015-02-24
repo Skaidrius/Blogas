@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h3 class="modal-title">Naujas įrašas</h3>
+    <form class="modal-body" role="form">
+        <div class="form-group">
+            <label for="category">Pasirinkite kategoriją (-as):</label>
+            <input type="text" class="form-control" id="category" placeholder="Kategorijos">
+        </div>
+        <div class="form-group">
+            <label for="title">Pavadinimas:</label>
+            <input type="text" class="form-control" id="title" placeholder="Įveskite pavadinimą">
+        </div>
+        <div class="form-group">
+            <label for="tale">Pasakojimas:</label>
+            <textarea class="form-control" rows="5" id="tale" placeholder="Jūsų pasakojimas"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="photolink">Nuotrauka:</label>
+            <input type="text" class="form-control" id="photolink" placeholder="Įveskite vaizdo nuorodą">
+        </div>
+        <div class="form-group">
+            <label for="videolink">Video:</label>
+            <input type="text" class="form-control" id="videolink" placeholder="Įveskite video nuorodą">
+        </div>
+        <div class="form-group">
+            <label for="artlink">Piešinys:</label>
+            <input type="text" class="form-control" id="artlink" placeholder="Įveskite piešinio nuorodą">
+        </div>
+        <div class="form-group">
+            <label for="creationlink">Piešinys:</label>
+            <input type="text" class="form-control" id="creationlink" placeholder="Įveskite darbelio nuorodą">
+        </div>
+        <div class="form-group">
+            <label for="author">Autorius:</label>
+            <input type="text" class="form-control" id="author" placeholder="Įveskite/Pasirinkite autorių">
+        </div>
+    </form>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="ok()">Skelbti</button>
+        <button class="btn btn-warning" ng-click="cancel()">Atšaukti</button>
+    </div>
+</div>
