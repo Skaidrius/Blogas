@@ -120,65 +120,37 @@ app.config(function($stateProvider, $urlRouterProvider) {
     });
 });
 
+
 /**************************
 *       CONTROLLERS
 **************************/
 
 //Controls the Main blog posts page - content.html
-app.controller('MainController', function ($scope, $http) {
+app.controller('MainController', function ($rootScope, $http) {
     'use strict';
 //    retrieve individual posts from json
     $http.get('js/posts.json')
         .then(function (res) {
-            $scope.posts = res.data;
+            $rootScope.posts = res.data;
         });
-    $scope.message = "Visi įrašai";
-
-//  FILTERS
-//    imagefilter
-    $scope.withImage = function (post) {
-    // Do some tests
-
-        if (post.imgsrc !== "") {
-            return true; // this will be listed in the results
-        }
-        return false; // otherwise it won't be within the results
-    };
-    
-//    textfilter
-    $scope.withText = function (post) {
-    // Do some tests
-
-        if (post.text !== "") {
-            return true; // this will be listed in the results
-        }
-        return false; // otherwise it won't be within the results
-    };
-    
+        
+    $rootScope.message = "Visi įrašai";
 });
 
 // Navigation controllers
 app.controller('TalesController', function ($scope) {
     'use strict';
     $scope.message = "Pasakojimai";
-    $scope.posts = function(posts){
-        if (posts.text != ""){
-            return true;
-        }
-        return false;
-    };
 });
 
 app.controller('PhotosController', function ($scope) {
     'use strict';
     $scope.message = "Nuotraukos";
-    $scope.posts = $scope.withImage;
 });
 
 app.controller('VideosController', function ($scope) {
     'use strict';
     $scope.message = "Video";
-    $scope.posts = $scope.withImage;
 });
 
 app.controller('ArtsController', function ($scope) {
