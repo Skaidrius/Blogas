@@ -1,5 +1,6 @@
 [ 
-  { "type":         "tales",
+  { "id":           "1",
+  "type":         "tales",
     "categories":   ["visos", "pasakėlė"],
     "title" :       "fitle",
     "imgsrc" :      "",
@@ -12,6 +13,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "2",
     "type":         "arts",
     "categories":   ["visos", "darbeliai", "šeima"],
     "title" :       "rokas",
@@ -25,6 +27,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "3",
     "type":         "tales",
     "categories":   ["visos", "istorija"],
     "title" :       "mitle",
@@ -38,6 +41,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "4",
     "type":         "videos",
     "categories":   ["visos", "istorija"],
     "title" :       "vaikai",
@@ -51,6 +55,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "5",
     "type":         "creations",
     "categories":   ["visos", "piešiniai", "gamta"],
     "title" :       "",
@@ -64,6 +69,7 @@
     "postDate" :    "2015-02-25"
   },
   {
+    "id":           "6",
     "type":         "photos",
     "categories":   ["visos"],
     "title" :       "sitle",
@@ -77,6 +83,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "7",
     "type":         "tales",
     "categories":   ["visos", "pasakėlė", "miškas", "šeima"],
     "title" :       "ritle",
@@ -90,6 +97,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "8",
     "type":         "arts",
     "categories":   ["visos", "darbeliai", "šeima"],
     "title" :       "juokas",
@@ -103,6 +111,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "9",
     "type":         "tales",
     "categories":   ["visos", "istorija"],
     "title" :       "utle",
@@ -116,6 +125,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "10",
     "type":         "photos",
     "categories":   ["visos", "piešiniai", "gamta"],
     "title" :       "",
@@ -129,6 +139,7 @@
     "postDate" :    "2015-02-25"
   },
   {
+    "id":           "11",
     "type":         "photos",
     "categories":   ["visos"],
     "title" :       "alte",
@@ -142,6 +153,7 @@
     "postDate" :    "2015-02-25"
   }, 
   {
+    "id":           "12",
     "type":         "tales",
     "categories":   ["visos", "pasakėlė", "miškas", "šeima"],
     "title" :       "malte",
