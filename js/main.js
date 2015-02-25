@@ -218,7 +218,7 @@ app.controller('PopularController', function ($scope) {
 app.controller('PostsController', function ($scope) {
     'use strict';
     $scope.message = "Įrašas";
-    $scope.post = ""; // reikia pasinagrineti sita: http://plnkr.co/edit/gmtcE2?p=preview
+    $scope.post = "";  // reikia pasinagrineti sita: http://plnkr.co/edit/gmtcE2?p=preview
 });
 
 app.controller('AuthorsController', function ($scope) {
