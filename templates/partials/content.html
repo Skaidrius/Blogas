@@ -4,17 +4,19 @@
 <!--    Header  -->
     
 <div class="row">
-    <form id="searchform" class="form-horizontal pageheader" role="search">
-        <div class="search-line form-group">
-            <h3><label for="searchform">{{message}}</label></h3>
-            <div class="col-sm-1" ng-controller="NewPostController">
-                <button type="button" class="btn btn-success" ng-click="open('templates/newpost.html')"><span class="fa fa-pencil"></span> Naujas </button>
+    <div class="page-header">
+        <form id="searchform" class="form-horizontal pageheader" role="search">
+            <div class="search-line form-group">
+                <h3><label for="searchform">{{message}}</label></h3>
+                <div class="col-sm-1" ng-controller="NewPostController">
+                    <button type="button" class="btn btn-success" ng-click="open('templates/newpost.html')"><span class="fa fa-pencil"></span> Naujas </button>
+                </div>
+                <div class="col-sm-11 last">
+                    <input type="text" class="form-control" id="searchform" placeholder="Ieškoti" ng-model="searchText">
+                </div>
             </div>
-            <div class="col-sm-11 last">
-                <input type="text" class="form-control" id="searchform" placeholder="Ieškoti" ng-model="searchText">
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <!-- could be like here http://www.bootply.com/tStLqUPQo3 -->
