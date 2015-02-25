@@ -215,6 +215,21 @@ app.controller('PopularController', function ($scope) {
     $scope.message = "Populiariausi";
 });
 
+app.controller('PostsController', function ($scope) {
+    'use strict';
+    $scope.message = "Įrašas";
+});
+
+app.controller('AuthorsController', function ($scope) {
+    'use strict';
+    $scope.message = "Autorius";
+});
+
+app.controller('AgesController', function ($scope) {
+    'use strict';
+    $scope.message = "Amžius";
+});
+
 //  MODAL controller
 app.controller('NavBarController', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
     'use strict';
