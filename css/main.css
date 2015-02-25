@@ -101,6 +101,16 @@ footer {  margin: 20px 0;  }
              column-gap: .75em;
 }
 
+.singlecolumn {
+    padding: 50px 0 0 0;
+
+     -webkit-column-width: 44em;
+        -moz-column-width: 44em;
+         -ms-column-width: 44em;
+             column-width: 44em;
+             margin: 0 auto;
+}
+
 .col-sm-6 {
  display: inline-block;
  margin:  0.75rem;

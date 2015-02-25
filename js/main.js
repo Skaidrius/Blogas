@@ -215,15 +215,19 @@ app.controller('PopularController', function ($scope) {
     $scope.message = "Populiariausi";
 });
 
-app.controller('PostsController', function ($scope) {
+app.controller('PostsController', function ($scope, $stateParams) {
     'use strict';
-    $scope.message = "Įrašas";
-    $scope.post = "";  // reikia pasinagrineti sita: http://plnkr.co/edit/gmtcE2?p=preview
+    // test 
+    // $scope.message = "Įrašas";
+    $scope.post = $scope.posts[$stateParams.id-1];
+    // have to look here: http://plnkr.co/edit/gmtcE2?p=preview
 });
 
-app.controller('AuthorsController', function ($scope) {
+app.controller('AuthorsController', function ($scope, $stateParams) {
     'use strict';
+    //test
     $scope.message = "Autorius";
+    $scope.post = $scope.posts[$stateParams.author];
 });
 
 app.controller('AgesController', function ($scope) {
