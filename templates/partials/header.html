@@ -12,12 +12,12 @@
     </div>
     <div class="collapse navbar-collapse" collapse="isCollapsed">
       <ul class="nav navbar-nav">
-        <li><a class="text-center" ui-sref="tales" ng-click="filters.type = 'tales'" >Pasakojimai</a></li>
-        <li><a class="text-center" ui-sref="photos"ng-click="filters.type = 'photos'">Nuotraukos</a></li>
-        <li><a class="text-center" ui-sref="videos"ng-click="filters.type = 'videos'">Video</a></li>
-        <li><a class="text-center" ui-sref="arts" ng-click="filters.type = 'arts'">Piešiniai</a></li> 
-        <li><a class="text-center" ui-sref="creations" ng-click="filters.type = 'creations'">Darbeliai</a></li>
-        <li><a class="text-center" ui-sref="popular" ng-click="filters.type = 'popular'">Populiariausi</a></li> 
+        <li><a class="text-center" ui-sref="tales" ui-sref-active="active" ng-click="filters.type = 'tales'" >Pasakojimai</a></li>
+        <li><a class="text-center" ui-sref="photos" ui-sref-active="active" ng-click="filters.type = 'photos'">Nuotraukos</a></li>
+        <li><a class="text-center" ui-sref="videos" ui-sref-active="active" ng-click="filters.type = 'videos'">Video</a></li>
+        <li><a class="text-center" ui-sref="arts" ui-sref-active="active" ng-click="filters.type = 'arts'">Piešiniai</a></li> 
+        <li><a class="text-center" ui-sref="creations" ui-sref-active="active" ng-click="filters.type = 'creations'">Darbeliai</a></li>
+        <li><a class="text-center" ui-sref="popular" ui-sref-active="active" ng-click="filters.type = 'popular'">Populiariausi</a></li> 
       </ul>
         
       <ul class="nav navbar-nav navbar-right" ng-controller="LoginController">

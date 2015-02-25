@@ -118,6 +118,51 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/partials/footer.html'
             }
         }
+    })
+    .state('post', {
+        url: '/post/:id',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/post-template.html', controller: 'PostsController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+            
+        }
+    })
+    .state('author', {
+        url: '/author/:id',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/author-template.html', controller: 'AuthorsController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+            
+        }
+    })
+    .state('age', {
+        url: '/age/:id',
+        views: {
+            'header': {
+                templateUrl: 'templates/partials/header.html'
+            },
+            'content': {
+                templateUrl: 'templates/age-template.html', controller: 'AgesController'
+            },
+            'footer': {
+                templateUrl: 'templates/partials/footer.html'
+            }
+            
+        }
     });
 });
 

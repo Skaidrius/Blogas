@@ -31,7 +31,7 @@
                     <div>
                         <p class="textformat smaller">Kategorijos: 
                             <span ng-repeat="category in post.categories">
-                                <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
+                                <a ng-show="category!=''" ui-sref="{{category}}">{{category | capitalize}}</a>
                                 <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
                             </span>
                         </p>
@@ -39,12 +39,12 @@
     <!--title-->
                     <div>
                         <h3 class="textformat text-center">
-                            <a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
+                            <a ng-show="post.title!=''" ui-sref="post({id: post.id})">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
                         </h3>
                     </div>
     <!--images-->
                     <div>
-                        <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
+                        <a ng-show="post.imgsrc!=''" ui-sref="post({id: post.id})">
                             <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
                         </a>
                     </div>
@@ -58,12 +58,12 @@
                     </div>
     <!-- author's name, image and age-->
                     <div>
-                        <a href="#/{{post.author}}">
+                        <a ui-sref="author({id: post.author})">
                             <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
                         </a>
                         <h4 class="text-center">
-                            <a href="#/{{post.author}}">{{post.author}}</a>, 
-                            <a href="#/{{post.author}}">{{post.age}} m.</a>
+                            <a ui-sref="author({id: post.author})">{{post.author}}</a>, 
+                            <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
                         </h4>
                     </div>
     
@@ -72,17 +72,17 @@
                         <p class = "social smaller">Dalintis:</p>
                         <ul class="list-unstyled list-inline list-social-icons">
                             <li class="tooltip-social facebook-link">
-                                <a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
                                   <i class="fa fa-facebook-square fa-2x"></i>
                                 </a>
                             </li>
                             <li class="tooltip-social google-plus-link">
-                                <a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
+                                <a ui-sref="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
                                   <i class="fa fa-google-plus-square fa-2x"></i>
                                 </a>
                             </li>
                             <li class="tooltip-social twitter-link">
-                                <a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <a ui-sref="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
                                   <i class="fa fa-twitter-square fa-2x"></i>
                                 </a>
                             </li>
