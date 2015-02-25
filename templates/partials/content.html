@@ -20,42 +20,52 @@
 <!-- could be like here http://www.bootply.com/tStLqUPQo3 -->
 <!--    Posts section-->
 <div class ="row">
-    <div class="container page"> <!-- taken from here http://www.bootply.com/KZeecILD2t-->
-
+    <div class="container page"> <!-- taken from http://www.bootply.com/KZeecILD2t-->
     	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText | filter:filters">
     		<blockquote class="panel panel-default" >
     			<div class="panel-body">
     <!--     Post categories, title, image, text-->
     <!--categories-->
-                    <p class="textformat smaller">Kategorijos: 
-                        <span ng-repeat="category in post.categories">
-                            <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
-                            <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
-                        </span>
-                    </p>
+                    <div>
+                        <p class="textformat smaller">Kategorijos: 
+                            <span ng-repeat="category in post.categories">
+                                <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
+                                <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                            </span>
+                        </p>
+                    </div>
     <!--title-->
-                    <h3 class="textformat text-center">
-                        <a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
-                    </h3>
+                    <div>
+                        <h3 class="textformat text-center">
+                            <a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
+                        </h3>
+                    </div>
     <!--images-->
-                    <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
-                        <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
-                    </a>
-                    <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
+                    <div>
+                        <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
+                            <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
+                        </a>
+                    </div>
+    <!--text-->                    
+                    <div>
+                        <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
+                    </div>
     <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
                     <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                         <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                     </div>
-    <!--     Author name, image and age-->
-                    <a href="#/{{post.author}}">
-                        <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
-                    </a>
-                    <h4 class="text-center">
-                        <a href="#/{{post.author}}">{{post.author}}</a>, 
-                        <a href="#/{{post.author}}">{{post.age}} m.</a>
-                    </h4>
+    <!-- author's name, image and age-->
+                    <div>
+                        <a href="#/{{post.author}}">
+                            <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
+                        </a>
+                        <h4 class="text-center">
+                            <a href="#/{{post.author}}">{{post.author}}</a>, 
+                            <a href="#/{{post.author}}">{{post.age}} m.</a>
+                        </h4>
+                    </div>
     
-    <!--     Share-->
+    <!-- share-->
                     <div class = "social text-center">
                         <p class = "social smaller">Dalintis:</p>
                         <ul class="list-unstyled list-inline list-social-icons">
@@ -75,6 +85,10 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+    <!--date-->
+                    <div>
+                        <p class="textformat smaller text-center">{{post.postDate}}</p>
                     </div>
     			</div>
     		</blockquote>

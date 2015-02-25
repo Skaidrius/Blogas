@@ -25,7 +25,8 @@ SITE TREE
 +           title    
 +           text     
 +           image/video  
-+           age      
++           age
+-           date
 +           social  
 +           masonry http://www.bootply.com/S3V4th3gMM done another from here http://www.bootply.com/KZeecILD2t
 -           infinite scroll       
