@@ -23,7 +23,7 @@ margin: 0;
 overflow: auto;
 }
 
-body {  background: rgb(245, 237, 237);
+body {  background: rgb(250, 255, 230);
 }
 
 h5 p {
@@ -70,7 +70,7 @@ footer {  margin: 20px 0;  }
 
 
 .panel {
-	border-left: 3px solid #e6e6e6;
+	border-left: 1px solid #cdf0af;
 	padding: 5px;
 }
 
