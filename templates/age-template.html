@@ -17,7 +17,8 @@
 
 <!--    Posts section-->
 <div class ="row">
-    <div class="container" ng-class="posts.length == 1 ? 'singlecolumn' : ( posts.length == 2 ? 'doublecolumn' )">
+    <!-- need to formate posts to 1 or 2 columns like here http://stackoverflow.com/questions/18172573/angular-ng-class-if-else-expression -->
+    <div class="container" ng-class="posts.length == 1 ? 'singlecolumn' : ( posts.length == 2 ? 'doublecolumn' )"> 
     	<article ng-repeat="post in posts | filter:searchText | filter:filters">
     		<blockquote class="panel panel-default" >
     			<div class="panel-body">
