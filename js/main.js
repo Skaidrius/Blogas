@@ -23,146 +23,84 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('home', {
         url: '/home',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'MainController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                       },
+                'content':  {templateUrl: 'templates/partials/content.html',     controller: 'MainController'    },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                       }
             }
-        }
     })
     .state('tales', {
         url: '/tales',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'TalesController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                       },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'TalesController'       },
+                'footer':   {templateUrl: 'templates/partials/footer.html'
+                }
             }
-        }
     })
     .state('photos', {
         url: '/photos',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'PhotosController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'PhotosController'       },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-        }
     })
     .state('videos', {
         url: '/videos',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'VideosController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'VideosController'       },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-        }
     })
     .state('arts', {
         url: '/arts',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'ArtsController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'ArtsController'         },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-        }
     })
     .state('creations', {
         url: '/creations',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'CreationsController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'CreationsController'    },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-        }
     })
     .state('popular', {
         url: '/popular',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/partials/content.html', controller: 'PopularController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'PopularController'      },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-        }
     })
     .state('post', {
         url: '/post/:id',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/post-template.html', controller: 'PostsController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/post-template.html', controller: 'PostsController'           },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-            
-        }
     })
     .state('author', {
         url: '/author/:id',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/author-template.html', controller: 'AuthorsController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/author-template.html', controller: 'AuthorsController'       },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-            
-        }
     })
     .state('age', {
         url: '/age/:id',
-        views: {
-            'header': {
-                templateUrl: 'templates/partials/header.html'
-            },
-            'content': {
-                templateUrl: 'templates/age-template.html', controller: 'AgesController'
-            },
-            'footer': {
-                templateUrl: 'templates/partials/footer.html'
+            views: {
+                'header':   {templateUrl: 'templates/partials/header.html'                                        },
+                'content':  {templateUrl: 'templates/age-template.html', controller: 'AgesController'             },
+                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
-            
-        }
     });
 });
 
@@ -226,13 +164,15 @@ app.controller('PostsController', function ($scope, $stateParams) {
 app.controller('AuthorsController', function ($scope, $stateParams) {
     'use strict';
     //test
-    $scope.message = "Autorius";
-    $scope.filters.author = "Jonas";
+    $scope.message = $stateParams.id;
+    $scope.filters.author = $stateParams.id;
 });
 
-app.controller('AgesController', function ($scope) {
+app.controller('AgesController', function ($scope, $stateParams) {
     'use strict';
-    $scope.message = "Amžius";
+    //test
+    $scope.message = $stateParams.id;
+    $scope.filters.age = $stateParams.id;
 });
 
 //  MODAL controller
