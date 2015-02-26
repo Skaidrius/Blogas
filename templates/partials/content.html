@@ -50,7 +50,7 @@
                     </div>
     <!--text-->                    
                     <div>
-                        <p class="textformat" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
+                        <p class="textformat text-justify" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
                     </div>
     <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
                     <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >

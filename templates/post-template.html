@@ -6,15 +6,15 @@
     <blockquote class="topmargin panel panel-default row col-sm-8 col-sm-offset-2">
 
         <div class="panel-body">
-<!--title-->
-            <div ng-show="post.title!=''">
-                <h3 class="panel-header textformat text-center">
-                    <a  href="#/{{post.title}}">{{post.title | capitalize}}</a>
-                </h3>
-            </div>		
-    		
     		<div class="col-sm-8">
     
+<!--title-->
+                <div ng-show="post.title!=''">
+                    <h3 class="panel-header textformat text-center">
+                        <a  href="#/{{post.title}}">{{post.title | capitalize}}</a>
+                    </h3>
+                </div>    
+
     <!--images-->
                 <div>
                     <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
@@ -23,7 +23,7 @@
                 </div>
     <!--text-->                    
                 <div>
-                    <p class="textformat" ng-show="post.text!=''">{{post.text}}</p>
+                    <p class="textformat text-justify" ng-show="post.text!=''">{{post.text}}</p>
                 </div>
     <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
                 <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
@@ -79,18 +79,16 @@
                             </li>
                         </ul>
                     </div>
+                    
+                <!--date of post-->
+            <div class="row">
+                <p class="textformat text-center smaller"> {{post.postDate}}</p>
+            </div>
+                    
                 </div>
                 
     		</div>
 		</div>
-
-
-        <div class="clearfix col-sm-12">
-<!--date of post-->
-            <div class="row">
-                <p class="textformat text-center smaller"> {{post.postDate}}</p>
-            </div>
-        </div>
 
 	</blockquote>
 </div>
