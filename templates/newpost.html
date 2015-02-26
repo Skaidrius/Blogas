@@ -2,7 +2,7 @@
     <h3 class="modal-title">Naujas įrašas</h3>
     <form class="modal-body" role="form" ng-controller="TypeDropdownCtrl">
         <div class="form-group">
-            <label>Pasirinkite įrašo tipą (-as):</label>
+            <label>Pasirinkite įrašo tipą:</label>
             <select class="form-control" ng-model="selectedType">
                 <option ng-repeat="item in types" value="{{item}}">{{item}}</option>
             </select>
@@ -30,6 +30,10 @@
         <div class="form-group" ng-show="selectedType=='Darbeliai'">
             <label for="creationlink">Darbelis:</label>
             <input type="text" class="form-control" id="creationlink" placeholder="Įveskite darbelio nuorodą">
+        </div>
+        <div class="form-group">
+            <label for="description">Trumpas aprašymas:</label>
+            <textarea class="form-control" rows="5" id="description" placeholder="Iki 120 simbolių"></textarea>
         </div>
         <div class="form-group">
             <label for="author">Nurodykite autorių:</label>

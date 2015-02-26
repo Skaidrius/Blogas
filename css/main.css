@@ -72,7 +72,7 @@ footer {  margin: 20px 0;  }
 }
 
 .pageheader{
-    padding-top:60px;
+    padding-top:50px;
     padding-bottom: 0;
 }
 
@@ -107,7 +107,6 @@ footer {  margin: 20px 0;  }
 }
 
 .singlecolumn {
-    padding: 50px 0 0 0;
 
      -webkit-column-width: 72em;
         -moz-column-width: 72em;
@@ -116,7 +115,6 @@ footer {  margin: 20px 0;  }
 }
 
 .doublecolumn {
-    padding: 50px 0 0 0;
 
      -webkit-column-width: 39em;
         -moz-column-width: 39em;
@@ -179,7 +177,6 @@ footer {  margin: 20px 0;  }
 
 footer {
     position: absolute;
-    width: 100%;
     height: 20px;
     bottom:0;
 }

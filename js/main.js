@@ -90,7 +90,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/author/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/author-template.html', controller: 'AuthorsController'       },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'AuthorsController'       },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -98,7 +98,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/age/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/age-template.html', controller: 'AgesController'             },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'AgesController'             },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     });
@@ -164,14 +164,14 @@ app.controller('PostsController', function ($scope, $stateParams) {
 app.controller('AuthorsController', function ($scope, $stateParams) {
     'use strict';
     //test
-    $scope.message = $stateParams.id;
+    $scope.message = "Autorius "+$stateParams.id;
     $scope.filters.author = $stateParams.id;
 });
 
 app.controller('AgesController', function ($scope, $stateParams) {
     'use strict';
     //test
-    $scope.message = $stateParams.id;
+    $scope.message = $stateParams.id+"mečių kūryba";
     $scope.filters.age = $stateParams.id;
 });
 
