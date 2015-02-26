@@ -135,12 +135,12 @@ app.controller('PhotosController', function ($scope) {
 
 app.controller('VideosController', function ($scope) {
     'use strict';
-    $scope.message = "Video";
+    $scope.message = "Filmukai";
 });
 
 app.controller('ArtsController', function ($scope) {
     'use strict';
-    $scope.message = "Piešiniai";
+    $scope.message = "Kūriniai";
 });
 
 app.controller('CreationsController', function ($scope) {
@@ -156,8 +156,10 @@ app.controller('PopularController', function ($scope) {
 app.controller('PostsController', function ($scope, $stateParams) {
     'use strict';
     // test 
-    // $scope.message = "Įrašas";
+    
     $scope.post = $scope.posts[$stateParams.id-1];
+    $scope.message = '';
+    
     // have to look here: http://plnkr.co/edit/gmtcE2?p=preview
 });
 
@@ -254,8 +256,8 @@ app.controller('TypeDropdownCtrl', function ($scope) {
     $scope.types = [
         'Pasakojimai',
         'Nuotraukos',
-        'Video',
-        'Piešiniai',
+        'Filmukai',
+        'Kūriniai',
         'Darbeliai'
     ];
     $scope.authors = [
