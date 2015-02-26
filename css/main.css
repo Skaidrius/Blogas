@@ -108,7 +108,20 @@ footer {  margin: 20px 0;  }
         -moz-column-width: 44em;
          -ms-column-width: 44em;
              column-width: 44em;
-             margin: 0 auto;
+}
+
+.doublecolumn {
+    padding: 50px 0 0 0;
+
+     -webkit-column-width: 39em;
+        -moz-column-width: 39em;
+         -ms-column-width: 39em;
+             column-width: 39em;
+             
+     -webkit-column-gap: .75em;
+        -moz-column-gap: .75em;
+         -ms-column-gap: .75em;
+             column-gap: .75em;
 }
 
 .col-sm-6 {
