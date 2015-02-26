@@ -227,7 +227,7 @@ app.controller('AuthorsController', function ($scope, $stateParams) {
     'use strict';
     //test
     $scope.message = "Autorius";
-    $scope.post = $scope.posts[$stateParams.author];
+    $scope.filters.author = "Jonas";
 });
 
 app.controller('AgesController', function ($scope) {

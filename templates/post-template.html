@@ -1,76 +1,96 @@
 <!--    postTemplate.html-->
 
-<div class="clearfix container singlecolumn page-header">
-    <article class="row col-sm-8 col-sm-offset-2">
-		<blockquote class="panel panel-default" >
-			<div class="panel-body">
-<!--     Post categories, title, image, text-->
-<!--categories-->
-                <div>
-                    <p class="textformat smaller">Kategorijos: 
-                        <span ng-repeat="category in post.categories">
-                            <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
-                            <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
-                        </span>
-                    </p>
-                </div>
+<div class="clearfix container singlecolumn">
+    
+
+    <blockquote class="topmargin panel panel-default row col-sm-8 col-sm-offset-2">
+
+        <div class="panel-body">
 <!--title-->
-                <div>
-                    <h3 class="textformat text-center">
-                        <a ng-show="post.title!=''" href="#/{{post.title}}">{{post.title | capitalize}}</a>
-                    </h3>
-                </div>
-<!--images-->
+            <div ng-show="post.title!=''">
+                <h3 class="panel-header textformat text-center">
+                    <a  href="#/{{post.title}}">{{post.title | capitalize}}</a>
+                </h3>
+            </div>		
+    		
+    		<div class="col-sm-8">
+    
+    <!--images-->
                 <div>
                     <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
                         <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
                     </a>
                 </div>
-<!--text-->                    
+    <!--text-->                    
                 <div>
                     <p class="textformat" ng-show="post.text!=''">{{post.text}}</p>
                 </div>
-<!--Video from here https://github.com/brandly/angular-youtube-embed         -->
+    <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
                 <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                     <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                 </div>
-<!-- author's name, image and age-->
+            </div>
+    
+    		<div class="col-sm-4">
+    		    
+    <!--author image-->
                 <div>
                     <a href="#/{{post.author}}">
                         <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
                     </a>
-                    <h4 class="text-center">
-                        <a href="#/{{post.author}}">{{post.author}}</a>, 
-                        <a href="#/{{post.author}}">{{post.age}} m.</a>
-                    </h4>
                 </div>
+    
+    <!--author and post information-->
+                <div class="row">
+    <!-- post author's name, age and image  -->
+                    <div class="">
+                        <h4 class="textformat">
+                            <p class="textformat">Autorius:  
+                                <a href="#/{{post.author}}">{{post.author}}</a>, 
+                                <a href="#/{{post.author}}">{{post.age}} m.</a>
+                            </p>
+    <!--categories-->
+                            <p class="smaller textformat">Kategorijos: 
+                                <span ng-repeat="category in post.categories">
+                                    <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
+                                    <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                                </span>
+                            </p>
+                        </h4>
+                    </div>
+    <!-- share-->
+        		    <div class = "text-center">
+                        <p class = "smaller textformat">Dalintis:</p>
+                        <ul class="list-unstyled list-inline list-social-icons">
+                            <li class="tooltip-social facebook-link">
+                                <a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                  <i class="fa fa-facebook-square fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="tooltip-social google-plus-link">
+                                <a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
+                                  <i class="fa fa-google-plus-square fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="tooltip-social twitter-link">
+                                <a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                  <i class="fa fa-twitter-square fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+    		</div>
+		</div>
 
-<!-- share-->
-                <div class = "social text-center">
-                    <p class = "social smaller">Dalintis:</p>
-                    <ul class="list-unstyled list-inline list-social-icons">
-                        <li class="tooltip-social facebook-link">
-                            <a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
-                              <i class="fa fa-facebook-square fa-2x"></i>
-                            </a>
-                        </li>
-                        <li class="tooltip-social google-plus-link">
-                            <a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
-                              <i class="fa fa-google-plus-square fa-2x"></i>
-                            </a>
-                        </li>
-                        <li class="tooltip-social twitter-link">
-                            <a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
-                              <i class="fa fa-twitter-square fa-2x"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-<!--date-->
-                <div>
-                    <p class="textformat smaller text-center">{{post.postDate}}</p>
-                </div>
-			</div>
-		</blockquote>
-	</article>
+
+        <div class="clearfix col-sm-12">
+<!--date of post-->
+            <div class="row">
+                <p class="textformat text-center smaller"> {{post.postDate}}</p>
+            </div>
+        </div>
+
+	</blockquote>
 </div>
