@@ -19,17 +19,17 @@
                     </h3>
                 </div>    
 
-    <!--images-->
+<!--post images-->
                 <div>
                     <a ng-show="post.imgsrc!=''" href="#/{{post.imgsrc}}">
                         <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
                     </a>
                 </div>
-    <!--text-->                    
+<!--post text-->                    
                 <div>
                     <p class="textformat text-justify" ng-show="post.text!=''">{{post.text}}</p>
                 </div>
-    <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
+<!--videos from here https://github.com/brandly/angular-youtube-embed         -->
                 <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                     <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                 </div>
@@ -37,23 +37,22 @@
     
     		<div class="col-sm-3 col-sm-offset-1">
     		    
+<!--author information-->
     <!--author image-->
                 <div>
                     <a href="#/{{post.author}}">
                         <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
                     </a>
                 </div>
-    
-    <!--author and post information-->
+<!-- post author's name and age   -->
                 <div class="row">
-    <!-- post author's name, age and image  -->
                     <div>
                         <h4 class="textformat">
                             <p class="textformat">Autorius:  
                                 <a href="#/{{post.author}}">{{post.author}}</a>, 
                                 <a href="#/{{post.author}}">{{post.age}} m.</a>
                             </p>
-    <!--categories-->
+<!--post categories-->
                             <p class="smaller textformat">Kategorijos: 
                                 <span ng-repeat="category in post.categories">
                                     <a ng-show="category!=''" href="#/{{category}}">{{category | capitalize}}</a>
@@ -62,11 +61,14 @@
                             </p>
                         </h4>
                     </div>
-    <!-- post description  -->
+<!-- post description  -->
                     <div ng-show="post.description!=''">
                         <h4 class="textformat">
-                            <p class="smaller textformat">Apie:  
-                            <p class = "textformat text-justify">{{post.description}}</p>
+                            <p class="smaller textformat">Apie:
+                            <div class = "well">
+                                <p class = "smaller textformat text-justify">{{post.description}}</p>
+                            </div>
+                            
                         </h4>
                     </div>
     <!-- share-->
