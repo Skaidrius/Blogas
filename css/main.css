@@ -16,27 +16,16 @@ html, body {  min-height: 100%;
 }
 
 body {
-overflow-y: scroll;
-margin-bottom: 20px;
-}
-
-.modal-open {
-overflow-y: scroll;
-margin: 0;
-}
-
-.modal {
-overflow: auto;
-}
-
-body {  background: rgb(250, 255, 230);
+    background: rgb(250, 255, 230);
+    overflow-y: scroll;
+    margin-bottom: 20px;
 }
 
 h3, h4 { margin-top:0; 
     padding-top: 0;
 }
 
-h4.text-center {  margin: 5px 0; }
+.text-center {  margin: 5px 0; }
 
 h5 p {
     white-space: 0.3em;
@@ -45,6 +34,19 @@ h5 p {
 
 /* Footer Styles */
 footer {  margin: 20px 0;  }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+ }
+
+.modal-open {
+    overflow-y: scroll;
+    margin: 0;
+}
+
+.modal {
+overflow: auto;
+}
 
 .dropdown {  cursor:pointer;  }
 

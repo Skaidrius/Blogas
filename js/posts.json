@@ -45,7 +45,7 @@
   }, 
   {
     "id":           "4",
-    "type":         "Filmukas",
+    "type":         "videos",
     "categories":   ["visos", "istorija"],
     "title" :       "vaikai",
     "imgsrc" :      "",

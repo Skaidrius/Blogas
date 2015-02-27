@@ -65,6 +65,7 @@ app.controller('PostsController', function ($scope, $stateParams) {
     $scope.message = '';    
     $scope.post = $scope.posts[$stateParams.id-1];
     // have to look here: http://plnkr.co/edit/gmtcE2?p=preview
+    
 });
 
 app.controller('AuthorsController', function ($scope, $stateParams) {
