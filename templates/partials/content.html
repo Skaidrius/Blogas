@@ -2,20 +2,30 @@
 
 <!--  Blog posts section -->
 <!--    Header  -->
-    
-<div class="row">
-    <div class="page-header">
-        <form id="searchform" class="form-horizontal pageheader" role="search">
-            <div class="search-line form-group">
-                <h3><label for="searchform">{{message}}</label></h3>
-                <div class="col-sm-1" ng-controller="NewPostController">
-                    <button type="button" class="btn btn-success" ng-click="open('templates/newpost.html')"><span class="fa fa-pencil"></span> Naujas </button>
-                </div>
-                <div class="col-sm-11 last">
-                    <input type="text" class="form-control" id="searchform" placeholder="Ieškoti" ng-model="searchText">
-                </div>
+<div class="headerbackground">
+    <div class = "container">
+        <div class="row ">
+            <div class="page-header">
+                <form id="searchform" class="form-horizontal pageheader" role="search">
+                    <div class="search-line form-group">
+                        <h3><label for="searchform">{{message}}</label></h3>
+                        <div class="col-sm-4" ng-controller="NewPostController">
+                            <div class = "btn btn-group leftpaddingzero">
+                                <button type="button" class="btn btn-success" ng-click="open('templates/newpost.html')"></span> Naujas </button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-pencil"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-camera-retro"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-film"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-paint-brush"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-rocket"></span></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 last downabit">
+                            <input type="text" class="form-control" id="searchform" placeholder="Ieškoti" ng-model="searchText">
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 

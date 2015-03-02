@@ -78,6 +78,10 @@ overflow: auto;
     padding-bottom: 0;
 }
 
+.headerbackground {
+    background-color: rgb(220, 255, 240);;
+}
+
 .topmargin {
     margin-top: 50px;
 }
@@ -142,6 +146,10 @@ overflow: auto;
     width: 100%;
 }
 
+.navbarheight {
+    max-height: 60px;
+}
+
 .navbar .nav li a {
     font-size: 1em;
 }
@@ -175,6 +183,21 @@ overflow: auto;
 .form-control:focus {
   border-color: #5cb85c;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(92, 184, 92, 0.6);
+}
+
+.downabit {
+    margin-top: 5px;
+}
+
+.greenborder {
+    border-color: #5cb85c;   
+}
+.leftpaddingzero {
+    padding-left: 0;
+}
+
+.paddingzero {
+    padding: 0;
 }
 
 footer {
