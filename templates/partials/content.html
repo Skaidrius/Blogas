@@ -42,7 +42,7 @@
                         <div>
                             <p class="textformat smaller">Kategorijos: 
                                 <span ng-repeat="category in post.categories">
-                                    <a ng-show="category!=''" ui-sref="{{category}}">{{category | capitalize}}</a>
+                                    <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
                                     <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
                                 </span>
                             </p>

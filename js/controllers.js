@@ -82,6 +82,13 @@ app.controller('AgesController', function ($scope, $stateParams) {
     $scope.filters.age = $stateParams.id;
 });
 
+app.controller('CategoriesController', function ($scope, $stateParams) {
+    'use strict';
+    //test
+    $scope.message = "Kategorija: "+$stateParams.id;
+    $scope.filters.categories = $stateParams.id;
+});
+
 //  MODAL controller
 app.controller('NavBarController', function ($scope) { //http://stackoverflow.com/questions/14741988/twitter-boostrap-navbar-with-angular-js-collapse-not-functioning
     'use strict';
