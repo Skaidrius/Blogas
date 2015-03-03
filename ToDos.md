@@ -2,7 +2,7 @@ SITE TREE
 
 -   blog page                           
 
--   header.html (menu) partially not functional (in collapsed mode) in mobile
+-   header.html (menu)
 -       categories:
 +           home
 +           tales
@@ -26,7 +26,7 @@ SITE TREE
 +           text     
 +           image/video  
 +           age
--           date
++           date
 +           social  
 +           masonry http://www.bootply.com/S3V4th3gMM done another from here http://www.bootply.com/KZeecILD2t
 -           infinite scroll       
@@ -36,19 +36,19 @@ SITE TREE
 -   new post page
 +       type
 -       category pick 
--       title    
--       text     
--       image/video  
--       author
++       title    
++       text     
++       image/video  
+-       author pick
 +       modal
 
 -   individual page template                   
--        categories                 
--        title                       
--        text                       
--        image/age                      
--        author
--        age                         
++        categories                 
++        title                       
++        text                       
++        image/age                      
++        author
++        age                         
 -        social                      
 -        comments
 -        modal
