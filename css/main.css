@@ -226,7 +226,7 @@ footer {  margin: 20px 0;  }
 }
 
 .linkstyle a:hover {
-    color: #775c24;
+    color: #3d3d8b;
 }
 
 .regular {
@@ -240,6 +240,11 @@ footer {  margin: 20px 0;  }
     padding-left: 0;
 }
 
+.btn-default:hover {
+    background: #3d8b3d;
+    color: #3d3d8b;
+}
+
 .paddingzero {
     padding: 0;
 }
@@ -248,4 +253,10 @@ footer {
     position: absolute;
     height: 20px;
     bottom:0;
+}
+
+.wellcolor {
+    background-color: #fff;
+    color: #3d3d8b;
+    border: 1px solid #3d8b3d;
 }
