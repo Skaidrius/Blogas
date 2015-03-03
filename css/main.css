@@ -90,6 +90,10 @@ footer {  margin: 20px 0;  }
 	border-left: 1px solid #cdf0af;
 }
 
+.panel-body {
+    padding: 0;
+}
+
 .textformat {
     padding: 0 10px;
 }
@@ -136,7 +140,7 @@ footer {  margin: 20px 0;  }
 .col-sm-6 {
  display: inline-block;
     margin:  0.75rem;
-    padding:  .5rem;
+    padding:  .32rem;
     width:  100%; 
     float:none;
 }
@@ -214,6 +218,19 @@ footer {  margin: 20px 0;  }
 
 .downabit {
     margin-top: 5px;
+}
+
+.linkstyle a {
+    text-decoration: none;
+    color: #116237;
+}
+
+.linkstyle a:hover {
+    color: #775c24;
+}
+
+.regular {
+    font-weight: normal;
 }
 
 .greenborder {

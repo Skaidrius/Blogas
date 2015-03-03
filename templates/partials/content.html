@@ -41,15 +41,15 @@
         <!--categories-->
                         <div>
                             <p class="textformat smaller">Kategorijos: 
-                                <span ng-repeat="category in post.categories">
-                                    <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
+                                <span ng-repeat="category in post.categories" class = "linkstyle">
+                                    <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
                                     <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
                                 </span>
                             </p>
                         </div>
         <!--title-->
                         <div>
-                            <h3 class="textformat text-center">
+                            <h3 class="textformat text-center linkstyle">
                                 <a ng-show="post.title!=''" ui-sref="post({id: post.id})">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
                             </h3>
                         </div>
@@ -61,7 +61,7 @@
                         </div>
         <!--text-->                    
                         <div>
-                            <p class="textformat text-justify" ng-show="post.text!=''">{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</p>
+                            <p class="linkstyle text-justify taletext" ng-show="post.text!=''" ><a class = "regular" ui-sref="post({id: post.id})" >{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</a></p>
                         </div>
         <!--Video from here https://github.com/brandly/angular-youtube-embed         -->
                         <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
@@ -72,7 +72,7 @@
                             <a ui-sref="author({id: post.author})">
                                 <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
                             </a>
-                            <h4 class="text-center">
+                            <h4 class="text-center linkstyle">
                                 <a ui-sref="author({id: post.author})">{{post.author}}</a>, 
                                 <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
                             </h4>
