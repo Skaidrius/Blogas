@@ -1,6 +1,6 @@
 <!--header.html-->
 <!--Navigation-->
-<nav class="navbar navbar-default navbar-fixed-top navbarheight" ng-controller="NavBarController">
+<nav id = "navigation" class="navbar navbar-default navbar-fixed-top navbarheight" role="navigation" ng-controller="NavBarController">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="isCollapsed = !isCollapsed">
@@ -19,11 +19,11 @@
         <li><a class="text-center" ui-sref="creations"  ng-click="filters.type = 'creations'">Darbeliai</a></li>
         <li><a class="text-center" ui-sref="popular"    ng-click="filters.type = 'popular'">  Populiariausi</a></li> 
       </ul>
-        
-      <div class="btn-group navbar-right" dropdown is-open="status.isopen" ng-controller="LoginController">
-        <button type="button" class="navbar dropdown-toggle downabit" dropdown-toggle ng-disabled="disabled">
-          <span class="fa fa-key"></span> Prisijungti(vardas) <span class="caret"></span>
-        </button>
+      
+      <ul class="nav navbar-nav navbar-right navbar-collapse" dropdown is-open="status.isopen" ng-controller="LoginController" >
+        <li type="button" class="navbar dropdown-toggle downabit text-center" dropdown-toggle ng-disabled="disabled">
+          <a><span class="fa fa-key"></span> Prisijungti(vardas) <span class="caret"></span></a>
+        </li>
         <ul class="dropdown-menu" role="menu">
           <li><a class="text-center" ng-click="open('templates/login.html')"><span class="fa fa-key"></span> Prisijungti</a></li>
           <li><a class="text-center" ng-click="open('templates/signup.html')"><span class="fa fa-users"></span> Registruotis</a></li>
@@ -32,7 +32,7 @@
           <li class="divider"></li>
           <li><a class="text-center" ng-click=""><span class="fa fa-key"></span> Atsijungt)</a></li>
         </ul>
-      </div>
+      </ul>
       
       
     </div>

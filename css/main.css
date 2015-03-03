@@ -16,7 +16,7 @@ html, body {  min-height: 100%;
 }
 
 body {
-    background: rgb(250, 255, 230);
+    background: #f0fbe5;
     overflow-y: scroll;
     margin-bottom: 20px;
 }
@@ -45,7 +45,7 @@ footer {  margin: 20px 0;  }
 }
 
 .modal {
-overflow: auto;
+    overflow: auto;
 }
 
 .dropdown {  cursor:pointer;  }
@@ -79,7 +79,7 @@ overflow: auto;
 }
 
 .headerbackground {
-    background-color: rgb(235, 255, 240);;
+    background-color: #d2f3b2;
 }
 
 .topmargin {
@@ -135,15 +135,29 @@ overflow: auto;
 
 .col-sm-6 {
  display: inline-block;
- margin:  0.75rem;
- padding:  .5rem;
- width:  100%; 
- float:none;
+    margin:  0.75rem;
+    padding:  .5rem;
+    width:  100%; 
+    float:none;
 }
 
 .bigimage {
     margin: 0;
     width: 100%;
+}
+
+#navigation > nav  {background-color: #188e50; color: #fff;}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #182a07;}
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {color: #f1f1f1; background-color: #568e18;}
+
+@media only screen and (max-width: 766px) {
+.collapsing .navbar {background-color: #f7f7f7; color: #fff;}
+.collapsing, .in {background-color: #f7f7f7; color: #fff;}
+.collapsing ul li a, .in ul li a {color: #555!important;}
+.collapsing ul li a:hover, .in ul li a:hover {color: #f1f1f1!important;}
+#navigation .navbar-header>button:hover {background-color: #a0e65d; color: #fff}
 }
 
 .navbarheight {
@@ -155,6 +169,11 @@ overflow: auto;
 }
 .navbar a {
     font-size: 1.2em;
+}
+
+.navbar-collapse.in{
+  max-height: none;
+  overflow-y: auto;
 }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -181,8 +200,8 @@ overflow: auto;
 
 /* change color of inputs */
 .form-control:focus {
-  border-color: #5cb85c;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(92, 184, 92, 0.6);
+    border-color: #5cb85c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(92, 184, 92, 0.6);
 }
 
 .buttonspace {
