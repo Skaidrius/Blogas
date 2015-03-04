@@ -89,7 +89,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/author/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'AuthorsController'},
+                'content':  {templateUrl: 'templates/partials/content.html',       controller: 'AuthorsController'},
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -97,7 +97,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/age/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'AgesController'         },
+                'content':  {templateUrl: 'templates/partials/content.html',       controller: 'AgesController'   },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -105,7 +105,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/category/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'CategoriesController'     },
+                'content':  {templateUrl: 'templates/partials/content.html', controller: 'CategoriesController'   },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     });
