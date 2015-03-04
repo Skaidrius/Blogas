@@ -7,74 +7,68 @@
 <div class = "container">
     <div class ="row">
         <div class = "col-sm-12">
-            <div class="container page"> <!-- taken from http://www.bootply.com/KZeecILD2t-->
+            <div class="page"> <!-- taken from http://www.bootply.com/KZeecILD2t-->
             	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText | filter:filters">
             	    <div>
             	        <blockquote class="panel panel-default" >
                 			<div class="panel-body">
 <!--     Post categories, title, image, text-->
 <!--title-->
-                                <div>
-                                    <h3 class="textformat text-center linkstyle paddingsmall">
-                                        <a ng-show="post.title!=''" ui-sref="post({id: post.id})">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
-                                    </h3>
-                                </div>
+                                <h3 class="textformat text-center linkstyle paddingsmall">
+                                    <a ng-show="post.title!=''" ui-sref="post({id: post.id})">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
+                                </h3>
 <!--images-->
-                                <div>
+                                <p>
                                     <a ng-show="post.imgsrc!=''" ui-sref="post({id: post.id})">
-                                        <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
+                                    <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
                                     </a>
-                                </div>
+                                </p>
 <!--text-->                    
-                                <div>
-                                    <p class="linkstyle text-justify taletext" ng-show="post.text!=''" ><a class = "regular" ui-sref="post({id: post.id})" >{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</a></p>
-                                </div>
+                                <p class="linkstyle text-justify taletext" ng-show="post.text!=''" ><a class = "regular" ui-sref="post({id: post.id})" >{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</a></p>
 <!--video from here https://github.com/brandly/angular-youtube-embed         -->
                                 <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                                     <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                                 </div>
 <!--author and share sector-->
-                                <div class = "clearfix">
 <!-- author's image-->
-                                    <div class = "col-sm-4">
-                                        <a ui-sref="author({id: post.author})">
-                                            <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
-                                        </a>
-                                    </div>
+                                <div class = "col-sm-4">
+                                    <a ui-sref="author({id: post.author})">
+                                        <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
+                                    </a>
+                                </div>
                     
 <!-- author name and age-->
-                                    <div class = "col-sm-8 downmore">
-                                        <h5 class="text-center linkstyle downmore">
-                                            <a ui-sref="author({id: post.author})">{{post.author}}</a>, 
-                                            <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
-                                        </h5>
-                                            <!--social-->
-                                        <ul class="text-center social list-unstyled list-inline list-social-icons smaller">
-                                            <li class = "social">Dalintis:<li>
-                                            <li class="tooltip-social facebook-link ">
-                                                <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
-                                                  <i class="fa fa-facebook-square fa-2x"></i>
-                                                </a>
-                                            </li>
-                                            <li class="tooltip-social google-plus-link ">
-                                                <a ui-sref="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
-                                                  <i class="fa fa-google-plus-square fa-2x"></i>
-                                                </a>
-                                            </li>
-                                            <li class="tooltip-social twitter-link ">
-                                                <a ui-sref="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
-                                                  <i class="fa fa-twitter-square fa-2x"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class = "col-sm-8 downmore">
+                                    <h5 class="text-center linkstyle downmore">
+                                        <a ui-sref="author({id: post.author})">{{post.author}}</a>, 
+                                        <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
+                                    </h5>
+                                        <!--social-->
+                                    <ul class="text-center social list-unstyled list-inline list-social-icons smaller">
+                                        <li class = "social">Dalintis:<li>
+                                        <li class="tooltip-social facebook-link ">
+                                            <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                              <i class="fa fa-facebook-square fa-2x"></i>
+                                            </a>
+                                        </li>
+                                        <li class="tooltip-social google-plus-link ">
+                                            <a ui-sref="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
+                                              <i class="fa fa-google-plus-square fa-2x"></i>
+                                            </a>
+                                        </li>
+                                        <li class="tooltip-social twitter-link ">
+                                            <a ui-sref="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                              <i class="fa fa-twitter-square fa-2x"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                 			</div>
                 		</blockquote>
             		</div>
 <!--categories-->
                     <div class = "col-sm-12 paddingzero">
-                        <div class = "postfooter paddingsmall">
+                        <aside class = "postfooter paddingsmall">
                             <p class="text-center smaller">Kategorijos: 
                                 <span ng-repeat="category in post.categories" class = "linkstyle">
                                     <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
@@ -83,7 +77,7 @@
                             </p>
                     <!--date-->
                             <p class="textformat smaller text-center">{{post.postDate}}</p>
-                        </div>
+                        </aside>
             		</div>
             	</article>
         	</div>
