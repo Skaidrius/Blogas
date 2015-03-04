@@ -1,20 +1,12 @@
 <!--    postTemplate.html-->
-
 <div ng-cloak>
-    
-    <div class="page-header pageheader">
-        <h3><label for="searchform">{{message}}</label></h3>
-    </div>
-    
-    <div class="clearfix container singlecolumn ">
-        
-    
-        <blockquote class="panel panel-default row col-sm-12 buttonspace">
-    
+    <div class="page-header pageheader"></div>
+    <div class="container ">
+        <div class = "row">
+        <blockquote class="panel panel-default row col-sm-10 buttonspace">
             <div class="panel-body">
-        		<div class="col-sm-7 col-sm-offset-1 ">
-        
-    <!--title-->
+        		<div class="col-sm-9">
+<!--title-->
                     <div ng-show="post.title!=''">
                         <h3 class="panel-header textformat text-center">
                             <p class = "linkstyle">
@@ -22,63 +14,56 @@
                             </p>
                         </h3>
                     </div>    
-    
-    <!--post images-->
+<!--post images-->
                     <div>
                         <a ng-show="post.imgsrc!=''" ui-sref="{{post.imgsrc}}">
                             <img class="bigimage img-responsive center-block img-thumbnail" alt="{{post.imgalt}}" ng-src="{{post.imgsrc}}">
                         </a>
                     </div>
-    <!--post text-->                    
+<!--post text-->                    
                     <div>
                         <p class="textformat text-justify linkstyle" ng-show="post.text!=''">{{post.text}}</p>
                     </div>
-    <!--videos from here https://github.com/brandly/angular-youtube-embed         -->
+<!--videos from here https://github.com/brandly/angular-youtube-embed         -->
                     <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                         <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                     </div>
                 </div>
-        
-        		<div class="col-sm-3 col-sm-offset-1">
-        		    
-    <!--author information-->
-        <!--author image-->
-                    <div>
-                        <a ui-sref="{{post.author}}">
-                            <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
-                        </a>
-                    </div>
-    <!-- post author's name and age   -->
+        		<div class="col-sm-3">
                     <div class="row">
-                        <div>
-                            <h4 class="textformat">
-                                <p class="textformat linkstyle">Autorius:  
-                                    <a ui-sref="author({id: post.author})">{{post.author}}</a>, 
-                                    <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
-                                </p>
-    <!--post categories-->
-                                <p class="smaller textformat linkstyle">Kategorijos: 
-                                    <span ng-repeat="category in post.categories">
-                                        <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
-                                        <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
-                                    </span>
-                                </p>
-                            </h4>
-                        </div>
-    <!-- post description  -->
-                        <div ng-show="post.description!=''">
-                            <h4 class="textformat">
-                                <p class="smaller textformat">Apie:
-                                <div class = "well wellcolor">
-                                    <p class = "smaller textformat text-justify">{{post.description}}</p>
-                                </div>
-                                
-                            </h4>
-                        </div>
-        <!-- share-->
-            		    <div class = "text-center">
-                            <p class = "smaller textformat">Dalintis:</p>
-                            <ul class="list-unstyled list-inline list-social-icons">
+<!--author image-->
+                        <article>
+                            <a ui-sref="{{post.author}}">
+                                <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
+                            </a>
+                        </article>
+<!-- post author's name and age   -->
+                        <article class="textformat text-center linkstyle">
+                            <a class="authorsname" ui-sref="author({id: post.author})">{{post.author}}</a>, 
+                            <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
+                        </article>
+<!-- post description  -->
+                        <article ng-show="post.description!=''">
+                            <h5 class="textformat">
+                                <p class = "textformat text-justify">{{post.description}}</p>
+                            </h5>
+                        </article>
+<!--post categories-->
+                        <article class = "textformat">
+                            <h4 class="textformat text-center smaller">Kategorijos: </h4>
+                            <h5 class="textformat linkstyle">
+                                <span ng-repeat="category in post.categories">
+                                    <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
+                                    <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                                </span>
+                            </h5>
+<!--date of post-->
+                            <h5 class="textformat text-center downmore"> {{post.postDate}}</h5>
+                        </article>
+<!-- share-->
+            		    <article class = "text-center">
+                            <ul class="sopcial smaller list-unstyled list-inline list-social-icons">
+                                <li class = "textformat">Dalintis:</li>
                                 <li class="tooltip-social facebook-link">
                                     <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
                                       <i class="fa fa-facebook-square fa-2x"></i>
@@ -95,28 +80,70 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        
-                    <!--date of post-->
-                <div class="row">
-                    <p class="textformat text-center smaller"> {{post.postDate}}</p>
-                </div>
-                        
+                        </article>
+                        <hr>
+<!--comments-->
+                        <article class = "textformat">
+                            <h4 class = "textformat smaller text-center"><p>Komentarai: </p></h4>
+                            <h5 class = "textformat">
+                                <p>
+                                    <em><span class="smaller">2015-02-26</span></em>,<strong><span> Romas: </span></strong><br>
+                                        <span class="smaller text-justify"> Labai grazus piesinys</span>
+                                </p>
+                                <hr>
+                                <p>
+                                    <em><span class="smaller">2015-02-27</span></em>, <strong><span> Marytė: </span></strong><br>
+                                        <span class="smaller text-justify"> Tikrai smagus</span>
+                                </p>
+                            </h5>
+                        </article>
                     </div>
-                    
         		</div>
     		</div>
-    
-        <div class="row backbutton">
-            <div class="col-sm-1">
-                <button type="button" class="btn btn-warning" ui-sref="home"><span class="fa fa-backward"></span> Grįžti </button>
+<!--backbutton-->
+            <div class="row backbutton">
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-warning" ui-sref="home"><span class="fa fa-backward"></span> Grįžti </button>
+                </div>
             </div>
-        </div>
-    
     	</blockquote>
-    	
+    	<blockquote class="panel panel-default row col-sm-2">
+    	    <article class="adsspace">
+    	        Reklaminis plotas:
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	    <hr>
+    	    <article class="adsspace">
+    	        Reklama
+    	    </article>
+    	</blockquote>
+    	</div>
     </div>
-    
-
-
 </div>
