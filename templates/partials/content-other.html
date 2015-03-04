@@ -6,8 +6,8 @@
 <!--    Posts section-->
 <div class = "container">
     <div class ="row">
-        <div class = "col-sm-12">
-            <div class="container page"> <!-- taken from http://www.bootply.com/KZeecILD2t-->
+        <div class = "col-sm-10">
+            <div class="container page-other"> <!-- taken from http://www.bootply.com/KZeecILD2t-->
             	<article class="col-sm-6" ng-repeat="post in posts | filter:searchText | filter:filters">
             	    <div>
             	        <blockquote class="panel panel-default" >
@@ -74,7 +74,7 @@
             		</div>
 <!--categories-->
                     <div class = "col-sm-12 paddingzero">
-                        <div class = "postfooter paddingsmall">
+                        <aside class = "postfooter paddingsmall">
                             <p class="text-center smaller">Kategorijos: 
                                 <span ng-repeat="category in post.categories" class = "linkstyle">
                                     <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
@@ -83,10 +83,13 @@
                             </p>
                     <!--date-->
                             <p class="textformat smaller text-center">{{post.postDate}}</p>
-                        </div>
+                        </aside>
             		</div>
             	</article>
         	</div>
+        </div>
+        <div class = "col-sm-2">
+            
         </div>
     </div>
 </div>

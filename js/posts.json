@@ -1,6 +1,6 @@
 [ 
   { "id":           "1",
-  "type":           "tales",
+    "type":         "tales",
     "categories":   ["visos", "pasakėlė"],
     "title" :       "fitle",
     "imgsrc" :      "",

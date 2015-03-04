@@ -24,7 +24,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('home', {
         url: '/home',
             views: {
-                'header':   {templateUrl: 'templates/partials/header.html'                                       },
+                'header':   {templateUrl: 'templates/partials/header.html',      controller: 'MainController'    },
                 'content':  {templateUrl: 'templates/partials/content.html',     controller: 'MainController'    },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                       }
             }
@@ -32,8 +32,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('tales', {
         url: '/tales',
             views: {
-                'header':   {templateUrl: 'templates/partials/header.html'                                       },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'TalesController'       },
+                'header':   {templateUrl: 'templates/partials/header.html',        controller: 'TalesController' },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'TalesController' },
                 'footer':   {templateUrl: 'templates/partials/footer.html'
                 }
             }
@@ -41,32 +41,32 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('photos', {
         url: '/photos',
             views: {
-                'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'PhotosController'       },
+                'header':   {templateUrl: 'templates/partials/header.html'       , controller: 'PhotosController' },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'PhotosController' },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
     .state('videos', {
         url: '/videos',
             views: {
-                'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'VideosController'       },
+                'header':   {templateUrl: 'templates/partials/header.html'       , controller: 'VideosController' },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'VideosController' },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
     .state('arts', {
         url: '/arts',
             views: {
-                'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'ArtsController'         },
+                'header':   {templateUrl: 'templates/partials/header.html'       , controller: 'ArtsController'   },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'ArtsController'   },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
     .state('creations', {
         url: '/creations',
             views: {
-                'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'CreationsController'    },
+                'header':   {templateUrl: 'templates/partials/header.html'       , controller: 'CreationsController'},
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'CreationsController'},
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -74,7 +74,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/popular',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'PopularController'      },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'PopularController'},
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -90,7 +90,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/author/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'AuthorsController'      },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'AuthorsController'},
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -98,7 +98,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/age/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'AgesController'         },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'AgesController'         },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     })
@@ -106,7 +106,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/category/:id',
             views: {
                 'header':   {templateUrl: 'templates/partials/header.html'                                        },
-                'content':  {templateUrl: 'templates/partials/content.html', controller: 'CategoriesController'     },
+                'content':  {templateUrl: 'templates/partials/content-other.html', controller: 'CategoriesController'     },
                 'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
             }
     });

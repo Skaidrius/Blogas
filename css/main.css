@@ -91,10 +91,23 @@ footer {  margin: 20px 0;  }
     padding-top: 10px;
 }
 
-.container.page {
+.page {
     padding-left: 0;
     
      -webkit-column-width: 23em;
+        -moz-column-width: 23em;
+         -ms-column-width: 23em;
+             column-width: 23em;
+     
+     -webkit-column-gap: .75em;
+        -moz-column-gap: .75em;
+         -ms-column-gap: .75em;
+             column-gap: .75em;
+}
+
+.page-other {
+    max-width: 60em;
+         -webkit-column-width: 23em;
         -moz-column-width: 23em;
          -ms-column-width: 23em;
              column-width: 23em;

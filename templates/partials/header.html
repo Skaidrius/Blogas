@@ -1,4 +1,5 @@
 <!--header.html-->
+
 <!--Navigation-->
 <nav id = "navigation" class="navbar navbar-default navbar-fixed-top navbarheight" role="navigation" ng-controller="NavBarController">
   <div class="container">
@@ -33,8 +34,35 @@
           <li><a class="text-center" ng-click=""><span class="fa fa-key"></span> Atsijungt)</a></li>
         </ul>
       </ul>
-      
-      
+
     </div>
   </div>
 </nav>
+
+<!--    Header  -->
+<div class="headerbackground">
+    <div class = "container">
+        <div class="row ">
+            <div class="page-header">
+                <form id="searchform" class="form-horizontal pageheader" role="search">
+                    <div class="search-line form-group">
+                        <div class="col-sm-4" ng-controller="NewPostController">
+                            <h3 class="textformat"><label for="searchform">{{message}}</label></h3>
+                            <div class = "btn btn-group ">
+                                <button type="button" class="btn btn-success" ng-click="open('templates/newpost.html')"></span> Naujas įrašas</button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-pencil"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-camera-retro"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-film"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-paint-brush"></span></button>
+                                <button type="button" class="btn btn-default greenborder " ng-click="open('templates/newpost.html')"><span class="fa fa-rocket"></span></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 last downabit">
+                            <input type="text" class="form-control" id="searchform" placeholder="Ieškoti" ng-model="searchText">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
