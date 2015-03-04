@@ -213,6 +213,21 @@ footer {  margin: 20px 0;  }
     padding: 5px;
 }
 
+.paddingmedium {
+    padding: 15px 0;
+}
+
+.marginzero {
+    margin: 0;
+}
+
+.marginbottomzero {
+    margin-bottom: 0;
+}
+
+.margintoptwenty {
+    margin-top: 20;
+}
 .adsspace {
     height: 50px;
     padding: 15px 0;
@@ -224,7 +239,7 @@ footer {
     bottom:0;
 }
 
-.social {
+.social-padding {
     padding-top: 15px;
 }
 
@@ -232,7 +247,7 @@ footer {
     display: inline;
 }
 
-hr {
+.hr {
     margin: 5px;
 }
 

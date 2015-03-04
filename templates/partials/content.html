@@ -36,12 +36,31 @@
 <!-- author name and age-->
                                 <div class = "col-sm-8 downmore">
                                     <h5 class="text-center linkstyle downmore">
-                                        <strong><a ui-sref="author({id: post.author})">{{post.author}}</a></strong>, <br>
-                                        amžius: <strong><a ui-sref="age({id: post.age})">{{post.age}} metai</a></strong>
+                                        <p></p><strong><a ui-sref="author({id: post.author})">{{post.author}}</a></strong>, <br>
+                                        amžius: <strong><a ui-sref="age({id: post.age})">{{post.age}} metai</a></strong></p>
                                     </h5>
+                                </div>
+                			</div>
+                		</blockquote>
+            		</div>
+                    <aside class = "postfooter paddingsmall">
+                        <div class="row">
+<!--categories-->
+                            <p class="col-sm-11 col-sm-offset-1 paddingsmall smaller marginbottomzero">Kategorijos: 
+                                <span ng-repeat="category in post.categories" class = "linkstyle">
+                                    <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
+                                    <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                                </span>
+                            </p>
+                        
+                            <div class = "row paddingzero">
+<!--date-->
+                                <div class="col-sm-7 col-sm-offset-1 paddingsmall">
+                                    <p class="smaller marginzero">{{post.postDate}}</p>
+                                </div>
+                                <div class="col-sm-3 paddingzero">
 <!--social-->
-                                    <ul class="text-center social list-unstyled list-inline list-social-icons smaller">
-                                        <li class = "social">Dalintis:<li>
+                                    <ul class="text-right social list-inline paddingzero marginzero">
                                         <li class="tooltip-social facebook-link smaller">
                                             <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
                                               <i class="fa fa-facebook-square fa-2x"></i>
@@ -59,22 +78,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                			</div>
-                		</blockquote>
-            		</div>
-<!--categories-->
-                    <div class = "col-sm-12 paddingzero">
-                        <aside class = "postfooter paddingsmall">
-                            <p class="text-center smaller">Kategorijos: 
-                                <span ng-repeat="category in post.categories" class = "linkstyle">
-                                    <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
-                                    <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
-                                </span>
-                            </p>
-                    <!--date-->
-                            <p class="textformat smaller text-center">{{post.postDate}}</p>
-                        </aside>
-            		</div>
+                            </div>
+                        </div>
+                    </aside>
             	</article>
         	</div>
         </div>

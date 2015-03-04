@@ -49,16 +49,18 @@
                             </h5>
                         </article>
 <!--post categories-->
-                        <article class = "textformat">
-                            <h4 class="textformat text-center smaller">Kategorijos: </h4>
-                            <h5 class="textformat linkstyle">
-                                <span ng-repeat="category in post.categories">
-                                    <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
-                                    <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
-                                </span>
-                            </h5>
+                        <article class = "textformat margintoptwenty">
+                            <div class="paddingmedium">
+                                <h4 class="textformat text-center smaller">Kategorijos: </h4>
+                                <h5 class="textformat linkstyle">
+                                    <span ng-repeat="category in post.categories">
+                                        <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
+                                        <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                                    </span>
+                                </h5>
+                            </div>
 <!--date of post-->
-                            <h5 class="textformat text-center downmore"> {{post.postDate}}</h5>
+                            <h5 class="textformat text-center paddingsmall"> {{post.postDate}}</h5>
                         </article>
 <!-- share-->
             		    <article class = "text-center">
@@ -90,7 +92,7 @@
                                     <em><span class="smaller">2015-02-26</span></em>,<strong><span> Romas: </span></strong><br>
                                         <span class="smaller text-justify"> Labai grazus piesinys</span>
                                 </p>
-                                <hr>
+                                <hr class="hr">
                                 <p>
                                     <em><span class="smaller">2015-02-27</span></em>, <strong><span> Marytė: </span></strong><br>
                                         <span class="smaller text-justify"> Tikrai smagus</span>
@@ -108,39 +110,39 @@
             </div>
     	</blockquote>
     	<blockquote class="panel panel-default row col-sm-2">
-    	    <article class="adsspace">
+    	    <article class="adsspace text-center">
     	        Reklaminis plotas:
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
-    	    <hr>
-    	    <article class="adsspace">
+    	    <hr class="hr">
+    	    <article class="adsspace text-center">
     	        Reklama
     	    </article>
     	</blockquote>
