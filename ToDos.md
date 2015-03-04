@@ -54,7 +54,7 @@ SITE TREE
 -        modal
 
 -   add/modify
--       author authentification              
+-       author authentification      maybe with http://passportjs.org/guide/username-password/
 -        login page
 +           design
 +           modal
