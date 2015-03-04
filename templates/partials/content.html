@@ -48,7 +48,7 @@
 <!--categories-->
                             <p class="col-sm-11 col-sm-offset-1 paddingsmall smaller marginbottomzero">Kategorijos: 
                                 <span ng-repeat="category in post.categories" class = "linkstyle">
-                                    <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
+                                    <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})"><strong>{{category | capitalize}}</strong></a>
                                     <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
                                 </span>
                             </p>
