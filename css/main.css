@@ -219,6 +219,10 @@ footer {
     padding-top: 15px;
 }
 
+.social li {
+    display: inline;
+}
+
 hr {
     margin: 5px;
 }

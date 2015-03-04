@@ -1,9 +1,6 @@
 <!--    content.html-->
 
-<!--  Blog posts section -->
-
-<!-- could be like here http://www.bootply.com/tStLqUPQo3 -->
-<!--    Posts section-->
+<!-- posts section-->
 <div class = "container">
     <div class ="row">
         <div class = "col-sm-12">
@@ -12,7 +9,7 @@
             	    <div>
             	        <blockquote class="panel panel-default" >
                 			<div class="panel-body">
-<!--     Post categories, title, image, text-->
+<!--post categories, title, image, text-->
 <!--title-->
                                 <h3 class="textformat text-center linkstyle paddingsmall">
                                     <a ng-show="post.title!=''" ui-sref="post({id: post.id})">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
@@ -30,13 +27,12 @@
                                     <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                                 </div>
 <!--author and share sector-->
-<!-- author's image-->
+<!--author's image-->
                                 <div class = "col-sm-4">
                                     <a ui-sref="author({id: post.author})">
                                         <img class="authorimage img-responsive center-block img-circle" alt="{{post.author}}" ng-src="{{post.authorimage}}">
                                     </a>
                                 </div>
-                    
 <!-- author name and age-->
                                 <div class = "col-sm-8 downmore">
                                     <h5 class="text-center linkstyle downmore">
