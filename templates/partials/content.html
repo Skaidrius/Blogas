@@ -9,7 +9,7 @@
             	    <div>
             	        <blockquote class="panel panel-default" >
                 			<div class="panel-body">
-<!--post categories, title, image, text-->
+<!--post title, image, text-->
 <!--title-->
                                 <h3 class="textformat text-center linkstyle paddingsmall">
                                     <a ng-show="post.title!=''" ui-sref="post({id: post.id})">{{post.title | limitTo:30 | capitalize}}{{post.title.length > 30 ? '&hellip;' : ''}}</a>
@@ -23,6 +23,7 @@
 <!--text-->                    
                                 <p class="linkstyle text-justify taletext" ng-show="post.text!=''" ><a class = "regular" ui-sref="post({id: post.id})" >{{post.text | limitTo : 250}} {{post.text.length > 250 ? '&hellip;' : ''}}</a></p>
 <!--video from here https://github.com/brandly/angular-youtube-embed         -->
+
                                 <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                                     <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                                 </div>
@@ -36,7 +37,7 @@
 <!-- author name and age-->
                                 <div class = "col-sm-8 downmore">
                                     <h5 class="text-center linkstyle downmore">
-                                        <p></p><strong><a ui-sref="author({id: post.author})">{{post.author}}</a></strong>, <br>
+                                        <p><strong><a ui-sref="author({id: post.author})">{{post.author}}</a></strong>, <br>
                                         amžius: <strong><a ui-sref="age({id: post.age})">{{post.age}} metai</a></strong></p>
                                     </h5>
                                 </div>
@@ -48,7 +49,7 @@
 <!--categories-->
                             <p class="col-sm-11 col-sm-offset-1 paddingsmall smaller marginbottomzero">Kategorijos: 
                                 <span ng-repeat="category in post.categories" class = "linkstyle">
-                                    <a  ng-show="category!=''" ui-sref="category({id: post.categories[$index]})"><strong>{{category | capitalize}}</strong></a>
+                                    <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})"><strong>{{category | capitalize}}</strong></a>
                                     <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
                                 </span>
                             </p>
