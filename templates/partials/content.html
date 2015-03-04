@@ -26,7 +26,7 @@
                                 <div ng-show="post.videosrc!=''" class="embed-responsive embed-responsive-4by3" >
                                     <youtube-video  video-url="post.videosrc" class="img-responsive embed-responsive-item"></youtube-video>
                                 </div>
-<!--author and share sector-->
+<!--author and social share sector-->
 <!--author's image-->
                                 <div class = "col-sm-4">
                                     <a ui-sref="author({id: post.author})">
@@ -39,20 +39,20 @@
                                         <a ui-sref="author({id: post.author})">{{post.author}}</a>, 
                                         <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
                                     </h5>
-                                        <!--social-->
+<!--social-->
                                     <ul class="text-center social list-unstyled list-inline list-social-icons smaller">
                                         <li class = "social">Dalintis:<li>
-                                        <li class="tooltip-social facebook-link ">
+                                        <li class="tooltip-social facebook-link smaller">
                                             <a ui-sref="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook">
                                               <i class="fa fa-facebook-square fa-2x"></i>
                                             </a>
                                         </li>
-                                        <li class="tooltip-social google-plus-link ">
+                                        <li class="tooltip-social google-plus-link smaller">
                                             <a ui-sref="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+">
                                               <i class="fa fa-google-plus-square fa-2x"></i>
                                             </a>
                                         </li>
-                                        <li class="tooltip-social twitter-link ">
+                                        <li class="tooltip-social twitter-link smaller">
                                             <a ui-sref="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter">
                                               <i class="fa fa-twitter-square fa-2x"></i>
                                             </a>
