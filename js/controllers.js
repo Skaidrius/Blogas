@@ -20,73 +20,15 @@ app.controller('MainController', function ($rootScope, $http) {
     'use strict';
 //    retrieve individual posts from json
     $http.get('js/posts.json')
-        .then(function (res) {
-            $rootScope.posts = res.data;
+        .success(function(data, status, headers, config) {
+            $rootScope.posts = data;
+        })
+        .error(function(data, status, headers, config) {
+        // log error
         });
         
     $rootScope.message = "Visi įrašai";
     $rootScope.filters = { };
-});
-
-// Navigation controllers
-app.controller('TalesController', function ($scope) {
-    'use strict';
-    $scope.message = "Pasakojimai";
-});
-
-app.controller('PhotosController', function ($scope) {
-    'use strict';
-    $scope.message = "Nuotraukos";
-});
-
-app.controller('VideosController', function ($scope) {
-    'use strict';
-    $scope.message = "Filmukai";
-});
-
-app.controller('ArtsController', function ($scope) {
-    'use strict';
-    $scope.message = "Kūriniai";
-});
-
-app.controller('CreationsController', function ($scope) {
-    'use strict';
-    $scope.message = "Darbeliai";
-});
-
-app.controller('PopularController', function ($scope) {
-    'use strict';
-    $scope.message = "Populiariausi";
-});
-
-app.controller('PostsController', function ($scope, $stateParams) {
-    'use strict';
-    // test 
-    $scope.message = '';    
-    $scope.post = $scope.posts[$stateParams.id-1];
-    // have to look here: http://plnkr.co/edit/gmtcE2?p=preview
-    
-});
-
-app.controller('AuthorsController', function ($scope, $stateParams) {
-    'use strict';
-    //test
-    $scope.message = "Autorius "+$stateParams.id;
-    $scope.filters.author = $stateParams.id;
-});
-
-app.controller('AgesController', function ($scope, $stateParams) {
-    'use strict';
-    //test
-    $scope.message = $stateParams.id+"mečių kūryba";
-    $scope.filters.age = $stateParams.id;
-});
-
-app.controller('CategoriesController', function ($scope, $stateParams) {
-    'use strict';
-    //test
-    $scope.message = "Kategorija: "+$stateParams.id;
-    $scope.filters.categories = $stateParams.id;
 });
 
 //  MODAL controller

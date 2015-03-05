@@ -38,9 +38,9 @@
                             </a>
                         </article>
 <!-- post author's name and age   -->
-                        <article class="textformat text-center linkstyle">
-                            <a class="authorsname" ui-sref="author({id: post.author})">{{post.author}}</a>, 
-                            <a ui-sref="age({id: post.age})">{{post.age}} m.</a>
+                        <article class="textformat text-center linkstyle downmore">
+                            <a class="authorsname" ui-sref="author({id: post.author})"><strong>{{post.author}}</strong></a>
+                            <h5><a ui-sref="age({id: post.age})">{{post.age}} metai</a></h5>
                         </article>
 <!-- post description  -->
                         <article ng-show="post.description!=''">
@@ -50,17 +50,17 @@
                         </article>
 <!--post categories-->
                         <article class = "textformat margintoptwenty">
-                            <div class="paddingmedium">
+                            <div class="">
                                 <h4 class="textformat text-center smaller">Kategorijos: </h4>
-                                <h5 class="textformat linkstyle">
+                                <h5 class="textformat linkstyle text-center">
                                     <span ng-repeat="category in post.categories">
-                                        <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}</a>
-                                        <span ng-hide="category == post.categories[post.categories.length-1]">, </span>
+                                        <a ng-show="category!=''" ui-sref="category({id: post.categories[$index]})">{{category | capitalize}}
+                                        <span ng-hide="category == post.categories[post.categories.length-1]">,</span></a>
                                     </span>
                                 </h5>
                             </div>
 <!--date of post-->
-                            <h5 class="textformat text-center paddingsmall"> {{post.postDate}}</h5>
+                            <h5 class="textformat text-center paddingmedium"> {{post.postDate}}</h5>
                         </article>
 <!-- share-->
             		    <article class = "text-center">
