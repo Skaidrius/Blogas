@@ -26,8 +26,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             views: {
                 'header':   {   templateUrl: 'templates/partials/header.html',
                                 controller: 'MainController'                    },
-                'content':  {   templateUrl: 'templates/partials/content.html'  },
-                'footer':   {   templateUrl: 'templates/partials/footer.html'   }
+                'content':  {   templateUrl: 'templates/partials/content.html'  }
             }
     })
     .state('tales', {
@@ -36,8 +35,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 'header':   {templateUrl: 'templates/partials/header.html',      
                                 controller: function($scope){ $scope.message = 'Pasakojimai'; } 
                             },
-                'content':  {templateUrl: 'templates/partials/content.html' },
-                'footer':   {templateUrl: 'templates/partials/footer.html'  }
+                'content':  {templateUrl: 'templates/partials/content.html' }
             }
     })
     .state('photos', {
@@ -46,8 +44,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 'header':   {templateUrl: 'templates/partials/header.html',        
                                 controller: function($scope){ $scope.message = 'Nuotraukos'; }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html' },
-                'footer':   {templateUrl: 'templates/partials/footer.html'  }
+                'content':  {templateUrl: 'templates/partials/content.html' }
             }
     })
     .state('videos', {
@@ -58,8 +55,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.message = 'Filmukai'; 
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'},
-                'footer':   {templateUrl: 'templates/partials/footer.html' }
+                'content':  {templateUrl: 'templates/partials/content.html'}
             }
     })
     .state('arts', {
@@ -70,8 +66,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.message = 'Kūriniai'; 
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'},
-                'footer':   {templateUrl: 'templates/partials/footer.html' }
+                'content':  {templateUrl: 'templates/partials/content.html'}
             }
     })
     .state('creations', {
@@ -82,8 +77,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.message = 'Darbeliai'; 
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'},
-                'footer':   {templateUrl: 'templates/partials/footer.html' }
+                'content':  {templateUrl: 'templates/partials/content.html'}
             }
     })
     .state('popular', {
@@ -94,8 +88,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.message = 'Populiariausi';
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'},
-                'footer':   {templateUrl: 'templates/partials/footer.html' }
+                'content':  {templateUrl: 'templates/partials/content.html'}
             }
     })
     .state('post', {
@@ -106,8 +99,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                 controller: function($scope, $stateParams){ 
                                     $scope.post = $scope.posts[$stateParams.id-1];
                                 }
-                            },
-                'footer':   {templateUrl: 'templates/partials/footer.html'  }
+                            }
             }
     })
     .state('author', {
@@ -119,8 +111,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.filters.author = $stateParams.id;
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'   },
-                'footer':   {templateUrl: 'templates/partials/footer.html'    }
+                'content':  {templateUrl: 'templates/partials/content.html'   }
             }
     })
     .state('age', {
@@ -132,8 +123,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.filters.age = $stateParams.id;
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'    },
-                'footer':   {templateUrl: 'templates/partials/footer.html'     }
+                'content':  {templateUrl: 'templates/partials/content.html'    }
             }
     })
     .state('category', {
@@ -145,8 +135,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                                     $scope.filters.categories = $stateParams.id;
                                 }
                             },
-                'content':  {templateUrl: 'templates/partials/content.html'},
-                'footer':   {templateUrl: 'templates/partials/footer.html'                                        }
+                'content':  {templateUrl: 'templates/partials/content.html'}
             }
     });
 });
