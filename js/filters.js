@@ -6,19 +6,15 @@
 /***********************
  * Main AngularJS Web Application
  * 
- *  FILTERS
+ *  FILTERS - CAPITALIZE
  *   
  ***********************/
-var app = angular.module('webApp');
+//IIFE
 
-
-
-/*************************
-*       FILTERS
-**************************/
- 
-// Capitalize first letter
-app.filter('capitalize', function () {
+(function (){
+    
+    // Capitalize first letter
+function capitalize() {
     'use strict';
     return function (input, scope) {
         if (input !== null) {
@@ -26,21 +22,11 @@ app.filter('capitalize', function () {
             return input.substring(0, 1).toUpperCase() + input.substring(1);
         }
     };
-});
+}
 
+angular.module('webApp')
+    .filter('capitalize', capitalize);
 
-// app.filter('filtera', function () {
-//     'use strict';
-//     return function (items) {
-//         var filtered = [];
-//         for (var i = 0; i < items.length; i++) {
-//             var item = items[i];
-//             if (item.text!="") {
-//               filtered.push(item);
-//             }
-//         }
-//         return filtered;
-//     };
-// });
+})();
 
 //need to make universal filter like here https://stackoverflow.com/questions/14882370/filter-list-of-items-when-clicking-category-link/14883002#14883002
